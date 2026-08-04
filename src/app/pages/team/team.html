@@ -14,7 +14,13 @@
       @for (member of team(); track member.id) {
         <article class="card">
           <div class="card__top">
-            <span class="card__avatar" [attr.data-accent]="member.accent">{{ member.initials }}</span>
+            <span class="card__avatar" [attr.data-accent]="member.accent">
+              @if (member.image) {
+                <img class="avatar-img" [src]="member.image" [alt]="member.name" loading="lazy" />
+              } @else {
+                {{ member.initials }}
+              }
+            </span>
             <span class="card__loc">{{ member.location }}</span>
           </div>
 

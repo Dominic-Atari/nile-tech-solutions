@@ -28,8 +28,14 @@ export interface Worker {
   /** Short line shown next to the name. */
   tagline: string;
   location: string;
-  /** Monogram shown in the gradient avatar. */
+  /** Monogram shown in the gradient avatar when there is no photo. */
   initials: string;
+  /**
+   * Optional profile photo. Use a base-href-relative path (no leading slash),
+   * e.g. `img/dominic.jpg`, so it resolves on both root and sub-path hosting.
+   * When absent, the initials monogram is shown instead.
+   */
+  image?: string;
   bio: string;
   /** Skill / focus tags. */
   focus: string[];

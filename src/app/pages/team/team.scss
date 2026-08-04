@@ -69,6 +69,13 @@
   background: linear-gradient(140deg, #21d4c4, #7c5cff);
 }
 
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
 .card__loc {
   font-family: var(--font-mono);
   font-size: 0.74rem;

@@ -15,6 +15,7 @@ export const TEAM: readonly Worker[] = [
     tagline: 'From a spreadsheet in Kakuma to software architecture.',
     location: 'Juba, South Sudan',
     initials: 'DO',
+    image: 'img/dominic.jpg',
     accent: 'violet',
     bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads architecture at Nile Tech, designing the IDesign way in C# and building across Java, Angular, and Ionic.",
     focus: ['C#', 'IDesign method', 'Java', 'HTML / CSS / JS', 'TypeScript', 'Angular', 'Ionic'],
@@ -28,43 +29,49 @@ export const TEAM: readonly Worker[] = [
         year: '2026 – now',
         title: 'Founder & Software Architect',
         org: 'Nile Tech Solutions',
-        description: 'Designs systems for a living now — the same instinct that started with a spreadsheet in Kakuma, applied with the IDesign method in C# and built across Java, Angular, and Ionic.',
+        description:
+          'Designs systems for a living now — the same instinct that started with a spreadsheet in Kakuma, applied with the IDesign method in C# and built across Java, Angular, and Ionic.',
         kind: 'milestone',
         current: true,
       },
       {
         year: '2026',
         title: 'Pathways Program Graduate',
-        org: "Don't Panic Labs",
-        description: 'Twenty weeks that turned a self-taught builder into an engineer. He showed up, did the work, and walked out ready to make a team better.',
+        org: "Doane University · partner with: Don't Panic Labs",
+        description:
+          'Twenty weeks that turned a self-taught builder into an engineer. He showed up, did the work, and walked out ready to make a team better.',
         kind: 'education',
       },
       {
         year: '2025',
         title: 'Building Anchovy',
         org: 'TMCO',
-        description: "Diane, TMCO's CEO, backed him to build Anchovy — a mobile app for saving and organizing recipes. His first real product, made for real people.",
+        description:
+          "Diane, TMCO's CEO, backed him to join the development team in Anchovy — a mobile app for saving and organizing recipes. His first real product, made for real people.",
         kind: 'role',
       },
       {
         year: '2024',
         title: 'Java & Spring Boot',
         org: 'Southeast Community College · Lincoln, NE',
-        description: 'Enrolled at SCC and got serious about software — learning Java and writing his first Spring Boot applications.',
+        description:
+          'Enrolled at SCC and got serious about software — learning Java and writing his first Spring Boot applications.',
         kind: 'education',
       },
       {
         year: '2023',
         title: 'A fresh start in the United States',
         org: 'Lincoln, Nebraska',
-        description: 'Arriving in the US, he made a decision: no more working around problems in a spreadsheet. It was time to build real software.',
+        description:
+          'Arriving in the US, he made a decision: no more working around problems in a spreadsheet. It was time to build real software.',
         kind: 'milestone',
       },
       {
         year: 'Until 2023',
         title: 'Bamba Chakula shop owner',
         org: 'Kakuma Refugee Camp, Kenya',
-        description: 'Ran a Bamba Chakula food business in the camp. As customer records piled up, he taught himself to keep track of it all in Microsoft Excel — the first time technology solved a real problem for him. The spark.',
+        description:
+          'Ran a Bamba Chakula food business in the camp. As customer records piled up, he taught himself to keep track of it all in Microsoft Excel — the first time technology solved a real problem for him. The spark.',
         kind: 'milestone',
       },
     ],
@@ -77,8 +84,15 @@ export const TEAM: readonly Worker[] = [
     location: 'Berlin, DE',
     initials: 'GG',
     accent: 'teal',
-    bio: "George leads how Nile Tech shows up in the world — brand, positioning, and growth. More than five years leading marketing teams taught him that even the best engineering still needs someone who can tell its story.",
-    focus: ['Brand strategy', 'Growth marketing', 'Team leadership', 'Go-to-market', 'Content', 'Analytics'],
+    bio: 'George leads how Nile Tech shows up in the world — brand, positioning, and growth. More than five years leading marketing teams taught him that even the best engineering still needs someone who can tell its story.',
+    focus: [
+      'Brand strategy',
+      'Growth marketing',
+      'Team leadership',
+      'Go-to-market',
+      'Content',
+      'Analytics',
+    ],
     email: CONTACT_EMAIL,
     links: [
       { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
@@ -89,7 +103,8 @@ export const TEAM: readonly Worker[] = [
         year: '2023 – now',
         title: 'Co-founder & Marketing Lead',
         org: 'Nile Tech Solutions',
-        description: "Owns brand, positioning, and growth — turning the studio's engineering work into a story clients actually hear.",
+        description:
+          "Owns brand, positioning, and growth — turning the studio's engineering work into a story clients actually hear.",
         kind: 'milestone',
         current: true,
       },
@@ -97,21 +112,24 @@ export const TEAM: readonly Worker[] = [
         year: '2021 – 2023',
         title: 'Head of Marketing',
         org: 'Cobalt Health',
-        description: 'Led a marketing team of eight through two product launches, building the brand and the demand engine behind them.',
+        description:
+          'Led a marketing team of eight through two product launches, building the brand and the demand engine behind them.',
         kind: 'role',
       },
       {
         year: '2019 – 2021',
         title: 'Marketing Manager',
         org: 'Fathom',
-        description: 'Stepped into leadership — owned campaigns end to end and grew the team from two to five.',
+        description:
+          'Stepped into leadership — owned campaigns end to end and grew the team from two to five.',
         kind: 'role',
       },
       {
         year: '2016 – 2019',
         title: 'Growth Marketer',
         org: 'Studio Verso',
-        description: 'Cut his teeth on content and paid growth for a long list of demanding clients.',
+        description:
+          'Cut his teeth on content and paid growth for a long list of demanding clients.',
         kind: 'role',
       },
       {
@@ -143,7 +161,8 @@ export const TEAM: readonly Worker[] = [
         year: '2022 – now',
         title: 'Senior Backend Engineer',
         org: 'Nile Tech Solutions',
-        description: 'Builds and hardens the platform layer across client projects — the APIs, jobs, and data models that carry the load.',
+        description:
+          'Builds and hardens the platform layer across client projects — the APIs, jobs, and data models that carry the load.',
         kind: 'role',
         current: true,
       },
@@ -151,14 +170,16 @@ export const TEAM: readonly Worker[] = [
         year: '2019 – 2022',
         title: 'Backend Engineer',
         org: 'Paystack',
-        description: 'Shipped payments and reconciliation services at scale, where correctness and uptime were the whole job.',
+        description:
+          'Shipped payments and reconciliation services at scale, where correctness and uptime were the whole job.',
         kind: 'role',
       },
       {
         year: '2017 – 2019',
         title: 'Software Engineer',
         org: 'Andela',
-        description: 'Worked across a rotation of client teams — a fast way to learn how many different ways a codebase can go wrong.',
+        description:
+          'Worked across a rotation of client teams — a fast way to learn how many different ways a codebase can go wrong.',
         kind: 'role',
       },
       {
@@ -190,7 +211,8 @@ export const TEAM: readonly Worker[] = [
         year: '2022 – now',
         title: 'Frontend Engineer',
         org: 'Nile Tech Solutions',
-        description: 'Builds the client-facing app across projects and keeps the component library sharp as products grow.',
+        description:
+          'Builds the client-facing app across projects and keeps the component library sharp as products grow.',
         kind: 'role',
         current: true,
       },
@@ -198,14 +220,16 @@ export const TEAM: readonly Worker[] = [
         year: '2020 – 2022',
         title: 'Frontend Developer',
         org: 'Unbabel',
-        description: 'Owned key surfaces of a real-time translation product, tuning them for speed and for users under pressure.',
+        description:
+          'Owned key surfaces of a real-time translation product, tuning them for speed and for users under pressure.',
         kind: 'role',
       },
       {
         year: '2018 – 2020',
         title: 'Junior Developer',
         org: 'Bright Pixel',
-        description: 'First job out of school. Learned the craft by shipping small things carefully.',
+        description:
+          'First job out of school. Learned the craft by shipping small things carefully.',
         kind: 'role',
       },
       {
@@ -237,7 +261,8 @@ export const TEAM: readonly Worker[] = [
         year: '2023 – now',
         title: 'Product Designer',
         org: 'Nile Tech Solutions',
-        description: 'Owns discovery and interface design across engagements, working shoulder to shoulder with the engineers building it.',
+        description:
+          'Owns discovery and interface design across engagements, working shoulder to shoulder with the engineers building it.',
         kind: 'role',
         current: true,
       },
@@ -245,14 +270,16 @@ export const TEAM: readonly Worker[] = [
         year: '2020 – 2023',
         title: 'UX Designer',
         org: 'Freshworks',
-        description: 'Designed core workflows for a product used by tens of thousands of businesses, and learned to defend simplicity.',
+        description:
+          'Designed core workflows for a product used by tens of thousands of businesses, and learned to defend simplicity.',
         kind: 'role',
       },
       {
         year: '2017 – 2020',
         title: 'Visual Designer',
         org: 'Lollypop Studio',
-        description: 'Cut her teeth on brand and interface work for a long list of very particular clients.',
+        description:
+          'Cut her teeth on brand and interface work for a long list of very particular clients.',
         kind: 'role',
       },
       {
@@ -284,7 +311,8 @@ export const TEAM: readonly Worker[] = [
         year: '2022 – now',
         title: 'Platform & DevOps Engineer',
         org: 'Nile Tech Solutions',
-        description: 'Builds the delivery and infrastructure layer for every client — repeatable, observable, and hard to break.',
+        description:
+          'Builds the delivery and infrastructure layer for every client — repeatable, observable, and hard to break.',
         kind: 'role',
         current: true,
       },
@@ -292,14 +320,16 @@ export const TEAM: readonly Worker[] = [
         year: '2019 – 2022',
         title: 'DevOps Engineer',
         org: 'Cabify',
-        description: 'Ran infrastructure for high-traffic services and cut deploy times from hours to minutes.',
+        description:
+          'Ran infrastructure for high-traffic services and cut deploy times from hours to minutes.',
         kind: 'role',
       },
       {
         year: '2016 – 2019',
         title: 'Systems Engineer',
         org: 'Telefónica',
-        description: 'Learned reliability the old-fashioned way — on systems that were never allowed to go down.',
+        description:
+          'Learned reliability the old-fashioned way — on systems that were never allowed to go down.',
         kind: 'role',
       },
       {

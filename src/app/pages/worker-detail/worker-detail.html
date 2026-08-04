@@ -9,7 +9,13 @@
     <!-- ---------- Profile ---------- -->
     <header class="profile">
       <div class="profile__id">
-        <span class="profile__avatar" [attr.data-accent]="member.accent">{{ member.initials }}</span>
+        <span class="profile__avatar" [attr.data-accent]="member.accent">
+          @if (member.image) {
+            <img class="avatar-img" [src]="member.image" [alt]="member.name" />
+          } @else {
+            {{ member.initials }}
+          }
+        </span>
         <div class="profile__head">
           <p class="profile__loc">{{ member.location }}</p>
           <h1 class="profile__name">{{ member.name }}</h1>

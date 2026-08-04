@@ -80,7 +80,13 @@
     <div class="preview">
       @for (member of team(); track member.id) {
         <a class="preview__card" [routerLink]="['/team', member.id]">
-          <span class="preview__avatar" [attr.data-accent]="member.accent">{{ member.initials }}</span>
+          <span class="preview__avatar" [attr.data-accent]="member.accent">
+            @if (member.image) {
+              <img class="avatar-img" [src]="member.image" [alt]="member.name" loading="lazy" />
+            } @else {
+              {{ member.initials }}
+            }
+          </span>
           <span class="preview__meta">
             <span class="preview__name">{{ member.name }}</span>
             <span class="preview__role">{{ member.role }}</span>
