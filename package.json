@@ -1,11 +1,11 @@
 {
-  "name": "line-tech-solutions",
+  "name": "nile-tech-solutions",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ghpages": "ng build --base-href /line-tech-solutions/ && cp dist/line-tech-solutions/browser/index.html dist/line-tech-solutions/browser/404.html",
+    "build:ghpages": "ng build --base-href /nile-tech-solutions/ && cp dist/nile-tech-solutions/browser/index.html dist/nile-tech-solutions/browser/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

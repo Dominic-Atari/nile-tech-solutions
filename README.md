@@ -1,6 +1,6 @@
-# Line Tech Solutions
+# Nile Tech Solutions
 
-A single-page site for **Line Tech Solutions**, a fictional engineering studio. Built
+A single-page site for **Nile Tech Solutions**, a fictional engineering studio. Built
 with **Angular 22** (standalone, zoneless, signals) — no backend; the team data ships
 with the app.
 
@@ -37,7 +37,7 @@ npm start         # ng serve → http://localhost:4200/
 Other scripts:
 
 ```bash
-npm run build          # production build → dist/line-tech-solutions/browser
+npm run build          # production build → dist/nile-tech-solutions/browser
 npm test               # unit tests (Vitest)
 npm run build:ghpages  # production build for GitHub Pages (sets base-href + 404.html)
 ```
@@ -61,11 +61,11 @@ directory, and SPA rewrites). To deploy:
 2. Go to **vercel.com → Add New → Project** and import the repo.
 3. Vercel reads `vercel.json` automatically — just click **Deploy**.
 
-   > Framework preset: **Angular** · Output: `dist/line-tech-solutions/browser`.
+   > Framework preset: **Angular** · Output: `dist/nile-tech-solutions/browser`.
    > These are already set in `vercel.json`; no manual configuration needed.
 
 Every push to the repo then triggers an automatic production deploy. Deep links
-(e.g. `/team/mara-lindqvist`) work on refresh thanks to the SPA rewrite rule.
+(e.g. `/team/dominic-atari-obiala`) work on refresh thanks to the SPA rewrite rule.
 
 Or deploy from your machine with the CLI:
 
@@ -80,12 +80,12 @@ vercel --prod     # production deploy
 A workflow is included at
 [`.github/workflows/deploy-gh-pages.yml`](.github/workflows/deploy-gh-pages.yml).
 
-1. Push this project to a GitHub repo named **`line-tech-solutions`**.
+1. Push this project to a GitHub repo named **`nile-tech-solutions`**.
    _(Using a different name? Update `build:ghpages` in `package.json` to match, so the
    base-href is correct. The workflow already derives it from the repo name automatically.)_
 2. In the repo: **Settings → Pages → Build and deployment → Source → GitHub Actions**.
 3. Push to `main`. The workflow builds with the correct base-href, adds a `404.html`
-   SPA fallback, and publishes to `https://<your-user>.github.io/line-tech-solutions/`.
+   SPA fallback, and publishes to `https://<your-user>.github.io/nile-tech-solutions/`.
 
 > **User/organisation page or custom domain?** Those serve from the domain root, so
 > build with a root base href instead: `ng build --base-href /` (and drop the repo-name

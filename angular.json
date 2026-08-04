@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "line-tech-solutions": {
+    "nile-tech-solutions": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "line-tech-solutions:build:production"
+              "buildTarget": "nile-tech-solutions:build:production"
             },
             "development": {
-              "buildTarget": "line-tech-solutions:build:development"
+              "buildTarget": "nile-tech-solutions:build:development"
             }
           },
           "defaultConfiguration": "development"

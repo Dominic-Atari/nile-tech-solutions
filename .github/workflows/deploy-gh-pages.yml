@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-# Fallback host for Line Tech Solutions.
+# Fallback host for Nile Tech Solutions.
 # Vercel is the primary target (see vercel.json). This workflow publishes the
 # same app to GitHub Pages whenever you push to the default branch.
 
@@ -41,13 +41,13 @@ jobs:
       # SPA fallback: GitHub Pages serves 404.html for unknown deep links.
       # A copy of index.html lets the Angular router take over on refresh.
       - name: Add SPA 404 fallback
-        run: cp dist/line-tech-solutions/browser/index.html dist/line-tech-solutions/browser/404.html
+        run: cp dist/nile-tech-solutions/browser/index.html dist/nile-tech-solutions/browser/404.html
 
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/line-tech-solutions/browser
+          path: dist/nile-tech-solutions/browser
 
   deploy:
     needs: build
