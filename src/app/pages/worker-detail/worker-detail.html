@@ -1,0 +1,85 @@
+@let member = worker();
+
+@if (member) {
+  <article class="section container">
+    <a class="back" routerLink="/team">
+      <span aria-hidden="true">←</span> Back to the team
+    </a>
+
+    <!-- ---------- Profile ---------- -->
+    <header class="profile">
+      <div class="profile__id">
+        <span class="profile__avatar" [attr.data-accent]="member.accent">{{ member.initials }}</span>
+        <div class="profile__head">
+          <p class="profile__loc">{{ member.location }}</p>
+          <h1 class="profile__name">{{ member.name }}</h1>
+          <p class="profile__role">{{ member.role }}</p>
+        </div>
+      </div>
+
+      <p class="profile__tagline">{{ member.tagline }}</p>
+      <p class="profile__bio">{{ member.bio }}</p>
+
+      <ul class="profile__tags" aria-label="Focus areas">
+        @for (tag of member.focus; track tag) {
+          <li class="tag">{{ tag }}</li>
+        }
+      </ul>
+
+      <div class="profile__links">
+        <a class="link" [href]="'mailto:' + member.email">{{ member.email }}</a>
+        @for (link of member.links; track link.href) {
+          <a class="link" [href]="link.href" target="_blank" rel="noopener">{{ link.label }} ↗</a>
+        }
+      </div>
+    </header>
+
+    <!-- ---------- History toggle + timeline ---------- -->
+    <div class="reveal">
+      <button
+        type="button"
+        class="btn btn--primary reveal__btn"
+        (click)="toggleHistory()"
+        [attr.aria-expanded]="historyOpen()"
+        aria-controls="history-panel"
+      >
+        <svg class="reveal__chev" [class.is-open]="historyOpen()" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M4 6 L8 10 L12 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {{ historyOpen() ? 'Hide personal history' : 'See personal history' }}
+      </button>
+
+      @if (historyOpen()) {
+        <section #panel id="history-panel" class="history" aria-label="Personal history">
+          <p class="eyebrow history__eyebrow">Personal history · most recent first</p>
+
+          <ol class="timeline">
+            @for (entry of member.history; track entry.year; let i = $index) {
+              <li class="tl" [class.tl--current]="entry.current" [style.--i]="i">
+                <div class="tl__axis">
+                  <span class="tl__node"></span>
+                </div>
+                <div class="tl__body">
+                  <div class="tl__meta">
+                    <span class="tl__year">{{ entry.year }}</span>
+                    <span class="tl__kind">{{ entry.kind }}</span>
+                  </div>
+                  <h2 class="tl__title">{{ entry.title }}</h2>
+                  <p class="tl__org">{{ entry.org }}</p>
+                  <p class="tl__desc">{{ entry.description }}</p>
+                </div>
+              </li>
+            }
+          </ol>
+        </section>
+      }
+    </div>
+  </article>
+} @else {
+  <div class="section container missing">
+    <p class="eyebrow">404 · No such profile</p>
+    <h1 class="missing__title">We couldn't find that person.</h1>
+    <p class="missing__copy">The whole team is just two people — this link points to neither.</p>
+    <a class="btn btn--primary" routerLink="/team">See the team</a>
+  </div>
+}

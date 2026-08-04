@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+# Fallback host for Line Tech Solutions.
+# Vercel is the primary target (see vercel.json). This workflow publishes the
+# same app to GitHub Pages whenever you push to the default branch.
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+# Grant the token the permissions Pages needs.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one Pages deployment at a time; let a newer push cancel an in-flight run.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Project Pages serve from https://<user>.github.io/<repo>/ , so the app
+      # must be built with that sub-path as its base href.
+      - name: Build
+        run: npx ng build --base-href "/${{ github.event.repository.name }}/"
+
+      # SPA fallback: GitHub Pages serves 404.html for unknown deep links.
+      # A copy of index.html lets the Angular router take over on refresh.
+      - name: Add SPA 404 fallback
+        run: cp dist/line-tech-solutions/browser/index.html dist/line-tech-solutions/browser/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/line-tech-solutions/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

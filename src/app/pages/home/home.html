@@ -1,0 +1,97 @@
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Engineering studio · est. 2023</p>
+
+    <h1 class="hero__title">
+      A straight line from<br />
+      problem to <span class="gradient-text">shipped product.</span>
+    </h1>
+
+    <p class="hero__lede">
+      Line Tech Solutions is a two-person studio. We take a tangled problem and draw the shortest
+      honest line to a system you can actually run — no hand-offs, no layers, no telephone game.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" routerLink="/team">Meet the team</a>
+      <a class="btn btn--ghost" href="mailto:hello@linetech.solutions">Start a project</a>
+    </div>
+  </div>
+
+  <!-- Signature: the throughline as a live signal trace -->
+  <div class="signal" aria-hidden="true">
+    <svg class="signal__svg" viewBox="0 0 1200 160" preserveAspectRatio="none" role="presentation">
+      <defs>
+        <linearGradient id="sigGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#7c5cff" />
+          <stop offset="0.5" stop-color="#5ec8ff" />
+          <stop offset="1" stop-color="#21d4c4" />
+        </linearGradient>
+        <filter id="sigBlur" x="-20%" y="-60%" width="140%" height="220%">
+          <feGaussianBlur stdDeviation="7" />
+        </filter>
+      </defs>
+
+      <path class="signal__track" d="M0 96 H210 L262 96 L306 42 L352 122 L410 74 L470 96 H628 L688 30 L748 132 L806 96 H986 L1044 58 L1104 96 H1200" />
+      <path class="signal__trace signal__trace--glow" pathLength="1" filter="url(#sigBlur)" d="M0 96 H210 L262 96 L306 42 L352 122 L410 74 L470 96 H628 L688 30 L748 132 L806 96 H986 L1044 58 L1104 96 H1200" />
+      <path class="signal__trace" pathLength="1" d="M0 96 H210 L262 96 L306 42 L352 122 L410 74 L470 96 H628 L688 30 L748 132 L806 96 H986 L1044 58 L1104 96 H1200" />
+      <circle class="signal__dot" r="5.5" />
+    </svg>
+  </div>
+</section>
+
+<!-- ===================== CAPABILITIES ===================== -->
+<section class="section">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">What we do</p>
+      <h2 class="section__title">Small team. Whole product.</h2>
+      <p class="section__sub">
+        Two people who between them cover the full path — the interface you touch and the platform
+        holding it up.
+      </p>
+    </header>
+
+    <div class="caps">
+      @for (cap of capabilities; track cap.title) {
+        <article class="cap">
+          <span class="cap__mark" aria-hidden="true"></span>
+          <h3 class="cap__title">{{ cap.title }}</h3>
+          <p class="cap__copy">{{ cap.copy }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEAM PREVIEW ===================== -->
+<section class="section">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">The two of us</p>
+      <h2 class="section__title">The whole company fits on one line.</h2>
+      <p class="section__sub">
+        No account managers between you and the work. You talk to the people writing the code — and
+        you can read exactly where each of them has been.
+      </p>
+    </header>
+
+    <div class="preview">
+      @for (member of team(); track member.id) {
+        <a class="preview__card" [routerLink]="['/team', member.id]">
+          <span class="preview__avatar" [attr.data-accent]="member.accent">{{ member.initials }}</span>
+          <span class="preview__meta">
+            <span class="preview__name">{{ member.name }}</span>
+            <span class="preview__role">{{ member.role }}</span>
+          </span>
+          <span class="preview__go" aria-hidden="true">→</span>
+        </a>
+      }
+    </div>
+
+    <div class="preview__cta">
+      <a class="btn btn--ghost" routerLink="/team">See the team &amp; their history</a>
+    </div>
+  </div>
+</section>

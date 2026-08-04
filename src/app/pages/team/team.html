@@ -1,0 +1,41 @@
+<section class="section">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">The team</p>
+      <h1 class="section__title">Two people, on one line.</h1>
+      <p class="section__sub">
+        This is the whole company. Between them they cover the full path from interface to platform —
+        and each carries a history you can open and read.
+      </p>
+    </header>
+
+    <div class="grid">
+      <!-- The connector: the throughline that links the two -->
+      <span class="grid__link" aria-hidden="true"></span>
+
+      @for (member of team(); track member.id) {
+        <article class="card">
+          <div class="card__top">
+            <span class="card__avatar" [attr.data-accent]="member.accent">{{ member.initials }}</span>
+            <span class="card__loc">{{ member.location }}</span>
+          </div>
+
+          <h2 class="card__name">{{ member.name }}</h2>
+          <p class="card__role">{{ member.role }}</p>
+          <p class="card__tagline">{{ member.tagline }}</p>
+          <p class="card__bio">{{ member.bio }}</p>
+
+          <ul class="card__tags" aria-label="Focus areas">
+            @for (tag of member.focus; track tag) {
+              <li class="tag">{{ tag }}</li>
+            }
+          </ul>
+
+          <a class="btn btn--primary card__cta" [routerLink]="['/team', member.id]">
+            View profile &amp; history
+          </a>
+        </article>
+      }
+    </div>
+  </div>
+</section>

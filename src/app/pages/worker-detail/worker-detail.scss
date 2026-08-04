@@ -1,0 +1,299 @@
+.section {
+  padding-top: clamp(40px, 6vw, 72px);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  transition: color 0.2s var(--ease);
+}
+
+.back:hover {
+  color: #fff;
+}
+
+/* ---------- Profile ---------- */
+.profile {
+  margin-top: 30px;
+  max-width: 68ch;
+}
+
+.profile__id {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile__avatar {
+  flex: none;
+  width: clamp(84px, 12vw, 108px);
+  height: clamp(84px, 12vw, 108px);
+  display: grid;
+  place-items: center;
+  border-radius: 24px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  color: #0a0c12;
+  background: var(--sig);
+  box-shadow: var(--sig-glow);
+}
+
+.profile__avatar[data-accent='teal'] {
+  background: linear-gradient(140deg, #21d4c4, #7c5cff);
+}
+
+.profile__loc {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.profile__name {
+  margin-top: 8px;
+  font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+}
+
+.profile__role {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  letter-spacing: 0.03em;
+  color: var(--sig-b);
+}
+
+.profile__tagline {
+  margin-top: 28px;
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  font-family: var(--font-display);
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.profile__bio {
+  margin-top: 16px;
+  color: var(--text-dim);
+  font-size: 1.08rem;
+}
+
+.profile__tags {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile__links {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--hairline-strong);
+  padding-bottom: 2px;
+  transition:
+    color 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+
+.link:hover {
+  color: #fff;
+  border-color: var(--sig-b);
+}
+
+/* ---------- Reveal ---------- */
+.reveal {
+  margin-top: 40px;
+  padding-top: 36px;
+  border-top: 1px solid var(--hairline);
+}
+
+.reveal__chev {
+  transition: transform 0.3s var(--ease);
+}
+
+.reveal__chev.is-open {
+  transform: rotate(180deg);
+}
+
+/* ---------- Timeline (the vertical throughline) ---------- */
+.history {
+  margin-top: 36px;
+  animation: fade 0.45s var(--ease) both;
+}
+
+.history__eyebrow {
+  margin-bottom: 28px;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 66ch;
+}
+
+.tl {
+  position: relative;
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 22px;
+  padding-bottom: 38px;
+  animation: rise 0.5s var(--ease) both;
+  animation-delay: calc(var(--i) * 75ms);
+}
+
+.tl:last-child {
+  padding-bottom: 6px;
+}
+
+.tl__axis {
+  position: relative;
+}
+
+.tl__axis::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  background: var(--sig);
+  opacity: 0.5;
+}
+
+.tl:first-child .tl__axis::before {
+  top: 9px;
+}
+
+.tl:last-child .tl__axis::before {
+  bottom: auto;
+  height: 9px;
+}
+
+.tl__node {
+  position: absolute;
+  left: 13px;
+  top: 9px;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 2px solid var(--sig-b);
+  z-index: 1;
+}
+
+.tl--current .tl__node {
+  background: var(--spark);
+  border-color: var(--spark);
+  box-shadow:
+    0 0 0 5px rgba(255, 194, 75, 0.16),
+    0 0 14px var(--spark);
+}
+
+.tl__meta {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tl__year {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.tl__kind {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+
+.tl--current .tl__kind {
+  color: var(--spark);
+  border-color: rgba(255, 194, 75, 0.4);
+}
+
+.tl__title {
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.tl__org {
+  margin-top: 4px;
+  color: var(--sig-b);
+  font-size: 0.96rem;
+}
+
+.tl__desc {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+/* ---------- Not found ---------- */
+.missing {
+  padding-top: clamp(60px, 12vw, 130px);
+}
+
+.missing__title {
+  margin-top: 16px;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.missing__copy {
+  margin-top: 14px;
+  margin-bottom: 30px;
+  color: var(--text-dim);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .profile__id {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+}
