@@ -2,17 +2,15 @@
   <div class="container">
     <header class="section__head">
       <p class="eyebrow">The team</p>
-      <h1 class="section__title">Two people, on one line.</h1>
+      <h1 class="section__title">The line-up.</h1>
       <p class="section__sub">
-        This is the whole company. Between them they cover the full path from interface to platform —
-        and each carries a history you can open and read.
+        The people who take your product from a tangled problem to a system you can run. Together
+        they cover the full path from interface to platform — and each carries a history you can open
+        and read.
       </p>
     </header>
 
     <div class="grid">
-      <!-- The connector: the throughline that links the two -->
-      <span class="grid__link" aria-hidden="true"></span>
-
       @for (member of team(); track member.id) {
         <article class="card">
           <div class="card__top">

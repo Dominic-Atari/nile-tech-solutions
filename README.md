@@ -1,18 +1,17 @@
 # Line Tech Solutions
 
-A single-page site for **Line Tech Solutions**, a fictional two-person engineering
-studio. Built with **Angular 22** (standalone, zoneless, signals) — no backend; the
-team data ships with the app.
+A single-page site for **Line Tech Solutions**, a fictional engineering studio. Built
+with **Angular 22** (standalone, zoneless, signals) — no backend; the team data ships
+with the app.
 
 **Concept — _The Throughline_.** One luminous duotone line is the brand's signature:
-in the hero it's a live signal trace, on the team page it links the two people, and on
-a profile it becomes the career timeline — so a person's _personal history_ is literally
-the line drawn out.
+in the hero it's a live signal trace, and on each profile it becomes that person's
+career timeline — so a member's _personal history_ is literally the line drawn out.
 
 ## Features
 
 - **Home** — hero, capabilities, and a preview of the team.
-- **Team** (`/team`) — the two members, side by side.
+- **Team** (`/team`) — the full team, side by side.
 - **Profile** (`/team/:id`) — each member's profile with a **See personal history**
   button that reveals their career timeline. This is the core interaction.
 - Fully responsive, keyboard-accessible, and honours `prefers-reduced-motion`.
@@ -45,7 +44,7 @@ npm run build:ghpages  # production build for GitHub Pages (sets base-href + 404
 
 ## Editing the team
 
-The two workers and their histories live in one file:
+The team members and their histories live in one file:
 [`src/app/core/team.data.ts`](src/app/core/team.data.ts). Add, remove, or edit
 entries there — everything else (routes, cards, timeline) follows automatically.
 
