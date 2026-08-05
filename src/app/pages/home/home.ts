@@ -18,6 +18,11 @@ export class Home {
   protected readonly team = inject(TeamService).workers;
   protected readonly projects = inject(ProjectsService).projects;
 
+  /** Host + path of a URL, for the browser-chrome address bar on Work cards. */
+  protected displayUrl(url: string): string {
+    return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  }
+
   protected readonly capabilities: Capability[] = [
     {
       title: 'Product engineering',
