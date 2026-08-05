@@ -13,7 +13,7 @@ export const TEAM: readonly Worker[] = [
     name: 'Dominic Atari Obiala',
     role: 'Founder · Software Architect',
     tagline: 'From a spreadsheet in Kakuma to software architecture.',
-    location: 'Juba, South Sudan',
+    location: 'Lincoln, NE, USA',
     initials: 'DO',
     image: 'img/dominic.jpg',
     accent: 'violet',
