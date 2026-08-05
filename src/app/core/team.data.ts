@@ -22,7 +22,7 @@ export const TEAM: readonly Worker[] = [
     email: CONTACT_EMAIL,
     links: [
       { label: 'GitHub', href: 'https://github.com/' },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dominic-obiala-0b1487340' },
     ],
     history: [
       {
