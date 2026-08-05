@@ -16,6 +16,27 @@ export const PROJECTS: readonly Project[] = [
     accent: 'violet',
   },
   {
+    id: 'amuanga',
+    name: 'Amuanga',
+    summary:
+      'A browser build of the Amuanga stone-sowing board game — play the computer or a friend, with animated moves and sound. The complete game engine runs client-side.',
+    tech: ['Angular', 'TypeScript', 'GitHub Pages'],
+    liveUrl: 'https://dominic-atari.github.io/amuanga/',
+    repoUrl: 'https://github.com/Dominic-Atari/amuanga',
+    accent: 'teal',
+  },
+  {
+    id: 'novaai',
+    name: 'Nova — tutor chat',
+    summary:
+      'An Angular chat app that teaches programming with runnable code examples, a guided IDesign tutorial, and offline math. LLM-backed, with a curated knowledge-base fallback.',
+    tech: ['Angular', 'TypeScript', 'Ollama', 'GitHub Pages'],
+    liveUrl: 'https://dominic-atari.github.io/novaai/',
+    repoUrl: 'https://github.com/Dominic-Atari/novaai',
+    note: 'Open-ended LLM chat needs the Ollama backend; this static demo falls back to a built-in knowledge base.',
+    accent: 'violet',
+  },
+  {
     id: 'reddit-api-viewer',
     name: 'Reddit API Viewer',
     summary:
