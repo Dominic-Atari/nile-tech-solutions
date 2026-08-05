@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TeamService } from '../../core/team.service';
+import { ProjectsService } from '../../core/projects.service';
 
 interface Capability {
   title: string;
@@ -15,6 +16,7 @@ interface Capability {
 })
 export class Home {
   protected readonly team = inject(TeamService).workers;
+  protected readonly projects = inject(ProjectsService).projects;
 
   protected readonly capabilities: Capability[] = [
     {

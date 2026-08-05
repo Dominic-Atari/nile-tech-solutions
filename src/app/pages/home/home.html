@@ -65,6 +65,50 @@
   </div>
 </section>
 
+<!-- ===================== WORK ===================== -->
+<section class="section" id="work">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="section__title">Things we have shipped.</h2>
+      <p class="section__sub">
+        Small, real, and live in your browser. Each one is deployed and open-source — click through
+        and use it.
+      </p>
+    </header>
+
+    <div class="work">
+      @for (project of projects(); track project.id) {
+        <article class="work__card" [attr.data-accent]="project.accent">
+          <div class="work__body">
+            <span class="work__mark" aria-hidden="true"></span>
+            <h3 class="work__name">{{ project.name }}</h3>
+            <p class="work__summary">{{ project.summary }}</p>
+            @if (project.note) {
+              <p class="work__note">{{ project.note }}</p>
+            }
+            <ul class="work__tech">
+              @for (tech of project.tech; track tech) {
+                <li>{{ tech }}</li>
+              }
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="btn btn--primary" [href]="project.liveUrl" target="_blank" rel="noopener">
+              Open live demo ↗
+            </a>
+            @if (project.repoUrl) {
+              <a class="btn btn--ghost" [href]="project.repoUrl" target="_blank" rel="noopener">
+                Source
+              </a>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
 <!-- ===================== TEAM PREVIEW ===================== -->
 <section class="section">
   <div class="container">
