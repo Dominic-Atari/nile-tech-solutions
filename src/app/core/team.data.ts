@@ -15,7 +15,7 @@ export const TEAM: readonly Worker[] = [
     tagline: 'From a spreadsheet in Kakuma to software architecture.',
     location: 'Lincoln, NE, USA',
     initials: 'DO',
-    image: 'img/dominic.jpg',
+    image: 'img/dominic1.jpg',
     accent: 'violet',
     bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads architecture at Nile Tech, designing the IDesign way in C# and building across Java, Angular, and Ionic.",
     focus: ['C#', 'IDesign method', 'Java', 'HTML / CSS / JS', 'TypeScript', 'Angular', 'Ionic'],
@@ -83,6 +83,7 @@ export const TEAM: readonly Worker[] = [
     tagline: 'Turns hardship into opportunity — for whole communities.',
     location: 'Juba, South Sudan',
     initials: 'GG',
+    image: 'img/George.jpeg',
     accent: 'teal',
     bio: 'George is a South Sudanese entrepreneur and community leader — Founder and CEO of Gradaid, a microfinance initiative backing university students and young entrepreneurs across South Sudan. His journey began in Kakuma Refugee Camp, where he turned hardship into organizations that empower others through finance, education, and enterprise. He brings that same builder\'s instinct to Nile Tech\'s growth.',
     focus: [
