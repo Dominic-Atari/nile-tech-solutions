@@ -29,11 +29,10 @@ export const PROJECTS: readonly Project[] = [
     id: 'novaai',
     name: 'Nova — tutor chat',
     summary:
-      'An Angular chat app that teaches programming with runnable code examples, a guided IDesign tutorial, and offline math. LLM-backed, with a curated knowledge-base fallback.',
-    tech: ['Angular', 'TypeScript', 'Ollama', 'GitHub Pages'],
-    liveUrl: 'https://dominic-atari.github.io/novaai/',
-    repoUrl: 'https://github.com/Dominic-Atari/novaai',
-    note: 'Open-ended LLM chat needs the Ollama backend; this static demo falls back to a built-in knowledge base.',
+      'An Angular chat app that teaches programming with runnable code examples, a guided IDesign tutorial, and offline math. Live LLM answers via Groq, with a curated knowledge-base fallback.',
+    tech: ['Angular', 'TypeScript', 'Groq', 'Vercel'],
+    liveUrl: 'https://novaai-app.vercel.app',
+    repoUrl: 'https://github.com/Dominic-Atari/novaai-app',
     accent: 'violet',
   },
   {
