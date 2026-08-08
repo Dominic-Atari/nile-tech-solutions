@@ -17,7 +17,7 @@ export const TEAM: readonly Worker[] = [
     initials: 'DO',
     image: 'img/dominic1.jpg',
     accent: 'violet',
-    bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads architecture at Nile Tech, designing the IDesign way in C# and building across Java, Angular, and Ionic.",
+    bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads architecture at Telesuk Solutions, designing the IDesign way in C# and building across Java, Angular, and Ionic.",
     focus: ['C#', 'IDesign method', 'Java', 'HTML / CSS / JS', 'TypeScript', 'Angular', 'Ionic'],
     email: CONTACT_EMAIL,
     links: [
@@ -28,7 +28,7 @@ export const TEAM: readonly Worker[] = [
       {
         year: '2026 – now',
         title: 'Founder & Software Architect',
-        org: 'Nile Tech Solutions',
+        org: 'Telesuk Solutions',
         description:
           'Designs systems for a living now — the same instinct that started with a spreadsheet in Kakuma, applied with the IDesign method in C# and built across Java, Angular, and Ionic.',
         kind: 'milestone',
@@ -85,7 +85,7 @@ export const TEAM: readonly Worker[] = [
     initials: 'GG',
     image: 'img/George.jpeg',
     accent: 'teal',
-    bio: 'George is a South Sudanese entrepreneur and community leader — Founder and CEO of Gradaid, a microfinance initiative backing university students and young entrepreneurs across South Sudan. His journey began in Kakuma Refugee Camp, where he turned hardship into organizations that empower others through finance, education, and enterprise. He brings that same builder\'s instinct to Nile Tech\'s growth.',
+    bio: 'George is a South Sudanese entrepreneur and community leader — Founder and CEO of Gradaid, a microfinance initiative backing university students and young entrepreneurs across South Sudan. His journey began in Kakuma Refugee Camp, where he turned hardship into organizations that empower others through finance, education, and enterprise. He brings that same builder\'s instinct to Telesuk Solutions\' growth.',
     focus: [
       'Entrepreneurship',
       'Microfinance',
@@ -103,7 +103,7 @@ export const TEAM: readonly Worker[] = [
       {
         year: 'Now',
         title: 'Co-founder & Business Lead',
-        org: 'Nile Tech Solutions',
+        org: 'Telesuk Solutions',
         description:
           "Brings an entrepreneur's instinct to the studio — partnerships, positioning, and turning engineering work into a business clients invest in.",
         kind: 'milestone',
@@ -193,7 +193,7 @@ export const TEAM: readonly Worker[] = [
       {
         year: '2022 – now',
         title: 'Senior Backend Engineer',
-        org: 'Nile Tech Solutions',
+        org: 'Telesuk Solutions',
         description:
           'Builds and hardens the platform layer across client projects — the APIs, jobs, and data models that carry the load.',
         kind: 'role',

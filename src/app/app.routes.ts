@@ -4,22 +4,22 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./pages/home/home').then((m) => m.Home),
-    title: 'Nile Tech Solutions — A straight line from problem to product',
+    title: 'Telesuk Solutions — Digital solutions for problems that matter',
   },
   {
     path: 'team',
     loadComponent: () => import('./pages/team/team').then((m) => m.Team),
-    title: 'Team — Nile Tech Solutions',
+    title: 'Team — Telesuk Solutions',
   },
   {
     path: 'team/:id',
     loadComponent: () =>
       import('./pages/worker-detail/worker-detail').then((m) => m.WorkerDetail),
-    title: 'Profile — Nile Tech Solutions',
+    title: 'Profile — Telesuk Solutions',
   },
   {
     path: '**',
     loadComponent: () => import('./pages/not-found/not-found').then((m) => m.NotFound),
-    title: 'Page not found — Nile Tech Solutions',
+    title: 'Page not found — Telesuk Solutions',
   },
 ];
