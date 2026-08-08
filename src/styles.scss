@@ -69,6 +69,11 @@ body {
   background-attachment: fixed;
 }
 
+/* Only the mobile nav drawer scrolls while it is open. */
+body.is-nav-open {
+  overflow: hidden;
+}
+
 /* --- Type scale ---------------------------------------------------------- */
 h1,
 h2,

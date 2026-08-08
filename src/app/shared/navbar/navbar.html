@@ -1,36 +1,47 @@
-<header class="nav">
+<header class="nav" [class.is-open]="menuOpen()">
   <div class="container nav__inner">
-    <a class="brand" routerLink="/" aria-label="Telesuk Solutions — home">
-      <svg class="brand__glyph" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
-        <defs>
-          <linearGradient id="navGrad" x1="0" y1="0" x2="1" y2="0.4">
-            <stop offset="0" stop-color="#7c5cff" />
-            <stop offset="1" stop-color="#21d4c4" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M4 20 L12 20 L16 9 L21 25 L27 12"
-          fill="none"
-          stroke="url(#navGrad)"
-          stroke-width="2.4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+    <a class="brand" routerLink="/" aria-label="Telesuk Solutions — home" (click)="closeMenu()">
+      <img class="brand__logo" src="img/telesuklogo.svg" alt="" width="40" height="33" />
       <span class="brand__word">Telesuk <span class="brand__tech">Solutions</span></span>
     </a>
 
-    <nav class="nav__links" aria-label="Primary">
-      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">
+    <nav id="primary-navigation" class="nav__links" aria-label="Primary">
+      <a
+        routerLink="/"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+      >
         Home
       </a>
-      <a routerLink="/" fragment="about">About</a>
-      <a routerLink="/" fragment="work">Work</a>
-      <a routerLink="/team" routerLinkActive="is-active">Team</a>
+      <a routerLink="/" fragment="about" (click)="closeMenu()">About</a>
+      <a routerLink="/" fragment="work" (click)="closeMenu()">Work</a>
+      <a routerLink="/team" routerLinkActive="is-active" (click)="closeMenu()">Team</a>
     </nav>
 
     <a class="btn btn--primary nav__cta" href="mailto:nile.tech.africa.development@gmail.com">
       Start a project
     </a>
+
+    <button
+      class="nav__toggle"
+      type="button"
+      [attr.aria-label]="menuOpen() ? 'Close navigation menu' : 'Open navigation menu'"
+      aria-controls="primary-navigation"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span class="nav__bar"></span>
+      <span class="nav__bar"></span>
+      <span class="nav__bar"></span>
+    </button>
   </div>
+
+  <button
+    class="nav__scrim"
+    type="button"
+    tabindex="-1"
+    aria-hidden="true"
+    (click)="closeMenu()"
+  ></button>
 </header>

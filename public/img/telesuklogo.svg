@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" role="img" aria-labelledby="telesukLogoTitle">
+  <title id="telesukLogoTitle">Telesuk Solutions</title>
+
+  <defs>
+    <!-- Top ribbon: magenta → violet → blue → sky -->
+    <linearGradient id="tsBandTop" gradientUnits="userSpaceOnUse" x1="8" y1="30" x2="82" y2="9">
+      <stop offset="0" stop-color="#c04ae8" />
+      <stop offset="0.12" stop-color="#a83ce8" />
+      <stop offset="0.32" stop-color="#9860eb" />
+      <stop offset="0.46" stop-color="#7050e5" />
+      <stop offset="0.59" stop-color="#5e5ce9" />
+      <stop offset="0.73" stop-color="#546ff0" />
+      <stop offset="0.92" stop-color="#68a6f9" />
+      <stop offset="1" stop-color="#74b4fb" />
+    </linearGradient>
+
+    <!-- Middle ribbon: indigo → blue → cyan -->
+    <linearGradient id="tsBandMid" gradientUnits="userSpaceOnUse" x1="40" y1="50" x2="100" y2="31">
+      <stop offset="0" stop-color="#6a5ee6" />
+      <stop offset="0.28" stop-color="#828aed" />
+      <stop offset="0.45" stop-color="#6182f1" />
+      <stop offset="0.62" stop-color="#508df5" />
+      <stop offset="0.78" stop-color="#58b1fa" />
+      <stop offset="0.92" stop-color="#5fccfa" />
+      <stop offset="1" stop-color="#63d4fb" />
+    </linearGradient>
+
+    <!-- Left leg: folds from near-black violet, through purple, back to deep indigo -->
+    <linearGradient id="tsLegLeft" gradientUnits="userSpaceOnUse" x1="10" y1="30" x2="44" y2="74">
+      <stop offset="0" stop-color="#1e0838" />
+      <stop offset="0.10" stop-color="#340d5c" />
+      <stop offset="0.25" stop-color="#541992" />
+      <stop offset="0.40" stop-color="#5f28bc" />
+      <stop offset="0.58" stop-color="#4d2ec0" />
+      <stop offset="0.72" stop-color="#3a29b3" />
+      <stop offset="0.85" stop-color="#29209a" />
+      <stop offset="1" stop-color="#17136a" />
+    </linearGradient>
+
+    <!-- Right leg: catches the light mid-sweep, then drops into indigo at the point -->
+    <linearGradient id="tsLegRight" gradientUnits="userSpaceOnUse" x1="78" y1="51" x2="50" y2="90">
+      <stop offset="0" stop-color="#1c2a86" />
+      <stop offset="0.08" stop-color="#25359f" />
+      <stop offset="0.16" stop-color="#3e66ee" />
+      <stop offset="0.34" stop-color="#426efa" />
+      <stop offset="0.54" stop-color="#3d4af1" />
+      <stop offset="0.74" stop-color="#322ac3" />
+      <stop offset="0.88" stop-color="#281c9b" />
+      <stop offset="1" stop-color="#211680" />
+    </linearGradient>
+
+    <!-- Shadow inside the fold -->
+    <linearGradient id="tsFold" gradientUnits="userSpaceOnUse" x1="49" y1="54" x2="50" y2="79">
+      <stop offset="0" stop-color="#1d1774" />
+      <stop offset="1" stop-color="#110e54" />
+    </linearGradient>
+
+    <!-- Specular rim along the leading edge of each ribbon -->
+    <linearGradient id="tsRimTop" gradientUnits="userSpaceOnUse" x1="27" y1="9" x2="82" y2="9">
+      <stop offset="0" stop-color="#d8d4e2" />
+      <stop offset="0.35" stop-color="#b7b2c0" />
+      <stop offset="0.7" stop-color="#9091c0" />
+      <stop offset="1" stop-color="#5c88c2" stop-opacity="0.5" />
+    </linearGradient>
+
+    <linearGradient id="tsRimMid" gradientUnits="userSpaceOnUse" x1="58" y1="31" x2="100" y2="31">
+      <stop offset="0" stop-color="#dce6f0" />
+      <stop offset="0.35" stop-color="#b7c2d2" />
+      <stop offset="0.7" stop-color="#79add0" />
+      <stop offset="1" stop-color="#58afcf" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow cast into the crevice, behind both legs -->
+  <path fill="url(#tsFold)" d="M48 51 L58 64 L49 77 L43.5 70 Z" />
+
+  <!-- Descending left leg -->
+  <path
+    fill="url(#tsLegLeft)"
+    stroke="url(#tsLegLeft)"
+    stroke-width="1.1"
+    stroke-linejoin="round"
+    d="M8 30 L29 30 L47 51 C49 55 49.4 58.5 49 62 C48.4 67 46 70.5 43 73 Z"
+  />
+
+  <!-- Descending right leg -->
+  <path
+    fill="url(#tsLegRight)"
+    stroke="url(#tsLegRight)"
+    stroke-width="1.1"
+    stroke-linejoin="round"
+    d="M82 51 C81.2 60 80.2 66 79 70.5 C76.5 78 69 86.5 60 90.8 L44 92.5 L48.5 79 L73 51 Z"
+  />
+
+  <!-- Top ribbon -->
+  <path
+    fill="url(#tsBandTop)"
+    stroke="url(#tsBandTop)"
+    stroke-width="1.1"
+    stroke-linejoin="round"
+    d="M27 9 L82 9 L64 30 L8 30 Z"
+  />
+  <path fill="url(#tsRimTop)" d="M27 9 L82 9 L80.7 10.6 L25.7 10.6 Z" />
+
+  <!-- Middle ribbon -->
+  <path
+    fill="url(#tsBandMid)"
+    stroke="url(#tsBandMid)"
+    stroke-width="1.1"
+    stroke-linejoin="round"
+    d="M58 31 L100 31 L82 50.5 L40 50.5 Z"
+  />
+  <path fill="url(#tsRimMid)" d="M58 31 L100 31 L98.7 32.6 L56.7 32.6 Z" />
+
+  <!-- Pixel burst -->
+  <g>
+    <rect x="104" y="2" width="8" height="8" rx="1.2" fill="#6e76f9" transform="rotate(-8 108 6)" />
+    <rect x="93" y="9" width="7" height="6.5" rx="1" fill="#558cf9" transform="rotate(6 96.5 12.2)" />
+    <rect x="103" y="14" width="5" height="5" rx="0.9" fill="#445ed3" transform="rotate(-10 105.5 16.5)" />
+    <rect x="111" y="16" width="8" height="6.5" rx="1.1" fill="#4c52f2" transform="rotate(8 115 19.2)" />
+    <rect x="85" y="20" width="4.2" height="4.2" rx="0.8" fill="#3d59df" transform="rotate(-12 87.1 22.1)" />
+    <rect x="97" y="22" width="8" height="7" rx="1.1" fill="#498af4" transform="rotate(-6 101 25.5)" />
+  </g>
+</svg>

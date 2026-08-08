@@ -1,6 +1,27 @@
 /* ---------- Hero ---------- */
 .hero {
-  padding-top: clamp(56px, 9vw, 120px);
+  padding-top: clamp(40px, 6vw, 80px);
+}
+
+.hero__logo {
+  width: clamp(120px, 17vw, 220px);
+  height: auto;
+  margin: 0 auto clamp(30px, 5vw, 56px);
+  filter: drop-shadow(0 18px 44px rgba(124, 92, 255, 0.32));
+  animation: logo-in 0.9s var(--ease) both;
+}
+
+@keyframes logo-in {
+  from {
+    opacity: 0;
+    transform: translateY(-14px) scale(0.94);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__logo {
+    animation: none;
+  }
 }
 
 .hero__title {
