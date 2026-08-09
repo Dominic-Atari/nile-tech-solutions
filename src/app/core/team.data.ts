@@ -11,7 +11,7 @@ export const TEAM: readonly Worker[] = [
   {
     id: 'dominic-atari-obiala',
     name: 'Dominic Atari Obiala',
-    role: 'Founder · Chief Technology Officer',
+    role: 'Co-Founder · Chief Technology Officer',
     tagline: 'Leads the technical direction behind every solution.',
     location: 'Lincoln, NE, USA',
     initials: 'DO',
@@ -27,7 +27,7 @@ export const TEAM: readonly Worker[] = [
     history: [
       {
         year: '2026 – now',
-        title: 'Founder & Chief Technology Officer',
+        title: 'Co-Founder & Chief Technology Officer',
         org: 'Telesuk Solutions',
         description:
           'Sets the technical direction for Telesuk Solutions, guiding architecture, engineering standards, and the delivery of practical digital products.',
@@ -85,7 +85,7 @@ export const TEAM: readonly Worker[] = [
     initials: 'GG',
     image: 'img/George.jpeg',
     accent: 'teal',
-    bio: 'George is a South Sudanese entrepreneur and community leader — Founder and CEO of Gradaid, a microfinance initiative backing university students and young entrepreneurs across South Sudan. His journey began in Kakuma Refugee Camp, where he turned hardship into organizations that empower others through finance, education, and enterprise. He brings that same builder\'s instinct to Telesuk Solutions\' growth.',
+    bio: "George is a South Sudanese entrepreneur and community leader — Founder and CEO of Gradaid, a microfinance initiative backing university students and young entrepreneurs across South Sudan. His journey began in Kakuma Refugee Camp, where he turned hardship into organizations that empower others through finance, education, and enterprise. He brings that same builder's instinct to Telesuk Solutions' growth.",
     focus: [
       'Entrepreneurship',
       'Microfinance',
@@ -183,7 +183,13 @@ export const TEAM: readonly Worker[] = [
     image: 'img/Amara.jpg',
     accent: 'violet',
     bio: 'Amara protects the quality of every product Telesuk Solutions ships. She turns requirements into clear acceptance criteria, tests the details others miss, and helps the team deliver reliable experiences from the first build to the final release.',
-    focus: ['Quality strategy', 'Test planning', 'User acceptance', 'Release readiness', 'Continuous improvement'],
+    focus: [
+      'Quality strategy',
+      'Test planning',
+      'User acceptance',
+      'Release readiness',
+      'Continuous improvement',
+    ],
     email: CONTACT_EMAIL,
     links: [
       { label: 'GitHub', href: 'https://github.com/' },
