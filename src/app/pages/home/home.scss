@@ -6,7 +6,7 @@
 .hero__logo {
   width: clamp(270px, 38.25vw, 495px);
   height: auto;
-  margin: 0 auto clamp(30px, 5vw, 56px);
+  margin: 0 auto 20px;
   filter: drop-shadow(0 18px 44px rgba(124, 92, 255, 0.32));
   animation: logo-in 0.9s var(--ease) both;
 }
