@@ -1,0 +1,74 @@
+<app-civic-dashboard pageTitle="Public information portal" pageContext="Open civic information">
+  <section class="public-hero">
+    <div class="public-hero__copy">
+      <span class="civic-page-head__eyebrow">National Election Commission · Public access</span>
+      <h1>Clear information for every citizen.</h1>
+      <p>Find election guidance, polling station details, and verified public updates without the noise.</p>
+    </div>
+    <div class="public-hero__search">
+      <label for="public-search">What are you looking for?</label>
+      <div class="public-search-box"><span aria-hidden="true"></span><input id="public-search" type="search" placeholder="Search the public portal" /><button type="button">Search</button></div>
+      <small>Try “polling station”, “registration”, or “accessibility”.</small>
+    </div>
+  </section>
+
+  <div class="civic-kpis public-kpis">
+    <article class="civic-kpi"><span class="civic-kpi__label">Stations open</span><strong class="civic-kpi__value">1,476</strong><span class="civic-kpi__trend">86.4% reporting nationwide</span></article>
+    <article class="civic-kpi"><span class="civic-kpi__label">Verified turnout</span><strong class="civic-kpi__value">55.8%</strong><span class="civic-kpi__trend">Updated 42 seconds ago</span></article>
+    <article class="civic-kpi"><span class="civic-kpi__label">Next update</span><strong class="civic-kpi__value">14:45</strong><span class="civic-kpi__trend civic-kpi__trend--neutral">CAT · automatic refresh</span></article>
+    <article class="civic-kpi"><span class="civic-kpi__label">Support lines</span><strong class="civic-kpi__value">24/7</strong><span class="civic-kpi__trend civic-kpi__trend--neutral">Call 800 2026</span></article>
+  </div>
+
+  <div class="public-primary-grid">
+    <section class="civic-card public-turnout-card">
+      <div class="civic-card__head">
+        <div><h2>Turnout by region</h2><p>Public bar reader · verified voter activity</p></div>
+        <span class="civic-badge civic-badge--green">Verified data</span>
+      </div>
+      <div class="civic-card__body public-bars">
+        @for (region of regionBars; track region.name) {
+          <button class="public-bar-row" type="button" [class.is-selected]="selectedRegion() === region.name" (click)="setRegion(region.name)">
+            <span class="public-bar-row__label"><strong>{{ region.name }}</strong><small>{{ region.stations }}</small></span>
+            <span class="public-bar-row__track"><i [style.width.%]="region.value"></i></span>
+            <span class="public-bar-row__value">{{ region.value }}%</span>
+          </button>
+        }
+        <div class="public-bar-footer"><span>Selected region</span><strong>{{ selectedRegion() }}</strong><a routerLink="/nec-command">View operations detail</a></div>
+      </div>
+    </section>
+
+    <section class="civic-card public-election-card">
+      <div class="civic-card__head"><div><h2>Today at a glance</h2><p>Election information summary</p></div><span class="civic-badge">08 Aug 2026</span></div>
+      <div class="civic-card__body">
+        <div class="public-countdown"><span>Polling closes in</span><strong>02 <i>hrs</i> 28 <i>min</i></strong><small>All times shown in Central Africa Time.</small></div>
+        <div class="public-info-list">
+          <a href="#public-help"><span class="public-info-icon public-info-icon--clock"></span><span><strong>Opening hours</strong><small>06:00–17:00 CAT at all open stations</small></span><b>›</b></a>
+          <a href="#public-help"><span class="public-info-icon public-info-icon--card"></span><span><strong>What to bring</strong><small>Voter card or approved identification</small></span><b>›</b></a>
+          <a href="#public-help"><span class="public-info-icon public-info-icon--access"></span><span><strong>Accessibility support</strong><small>Assistance available on request</small></span><b>›</b></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="public-secondary-grid">
+    <section class="civic-card public-readers-card">
+      <div class="civic-card__head"><div><h2>Public reporting readers</h2><p>Simple indicators for the national picture</p></div><span class="civic-badge">Live</span></div>
+      <div class="civic-card__body public-reader-list">
+        @for (bar of publicBars; track bar.label) {
+          <div class="public-reader"><div><span>{{ bar.label }}</span><strong>{{ bar.value }}%</strong></div><div class="civic-progress"><span [style.width.%]="bar.value"></span></div></div>
+        }
+      </div>
+    </section>
+
+    <section class="civic-card public-announcements-card" id="public-help">
+      <div class="civic-card__head"><div><h2>Latest announcements</h2><p>Official public notices</p></div><button class="public-text-button" type="button">All notices</button></div>
+      <div class="public-announcements">
+        @for (announcement of announcements; track announcement.title) {
+          <a href="#public-help" class="public-announcement"><span class="public-announcement__date">{{ announcement.date }}<small>{{ announcement.category }}</small></span><strong>{{ announcement.title }}</strong><b>›</b></a>
+        }
+      </div>
+    </section>
+  </div>
+
+  <div class="public-disclaimer"><span>i</span><p>This demonstration portal uses sample civic data to show the public experience. Official results and notices should always be confirmed through the National Election Commission.</p></div>
+</app-civic-dashboard>

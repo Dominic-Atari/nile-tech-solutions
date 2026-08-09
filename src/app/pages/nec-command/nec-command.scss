@@ -1,0 +1,318 @@
+.nec-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: 18px;
+}
+
+.nec-map-card .civic-card__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 18px;
+}
+
+.nec-map-visual {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  border: 1px solid #e4ebf5;
+  border-radius: 9px;
+  background:
+    linear-gradient(rgba(62, 111, 242, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(62, 111, 242, 0.045) 1px, transparent 1px),
+    #f9fbfe;
+  background-size: 28px 28px;
+}
+
+.nec-map-ghost {
+  position: absolute;
+  left: 19%;
+  top: 10%;
+  width: 58%;
+  height: 75%;
+  border: 2px solid rgba(92, 126, 209, 0.2);
+  clip-path: polygon(38% 0, 63% 5%, 77% 19%, 70% 34%, 87% 47%, 73% 60%, 79% 77%, 57% 100%, 31% 86%, 17% 69%, 25% 51%, 8% 37%, 20% 17%);
+  background: rgba(96, 131, 215, 0.06);
+}
+
+.nec-map-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--civic-ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.59rem;
+}
+
+.nec-map-node i,
+.nec-map-legend i {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--civic-green);
+  box-shadow: 0 0 0 4px rgba(32, 167, 119, 0.12);
+}
+
+.nec-map-node--one { left: 49%; top: 55%; }
+.nec-map-node--two { left: 35%; top: 66%; }
+.nec-map-node--three { left: 56%; top: 28%; }
+.nec-map-node--four { left: 64%; top: 53%; }
+.nec-map-node--three i { background: var(--civic-red); box-shadow: 0 0 0 4px rgba(217, 91, 106, 0.12); }
+.nec-map-node--four i { background: var(--civic-amber); box-shadow: 0 0 0 4px rgba(231, 162, 41, 0.12); }
+
+.nec-map-legend {
+  position: absolute;
+  right: 14px;
+  bottom: 13px;
+  display: grid;
+  gap: 7px;
+  color: var(--civic-ink-soft);
+  font-size: 0.62rem;
+}
+
+.nec-map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nec-map-legend i {
+  width: 6px;
+  height: 6px;
+  box-shadow: none;
+}
+
+.nec-map-legend i.is-watch { background: var(--civic-amber); }
+.nec-map-legend i.is-alert { background: var(--civic-red); }
+
+.nec-map-summary {
+  display: grid;
+  align-content: center;
+  gap: 17px;
+}
+
+.nec-map-summary div {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.nec-map-summary div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.nec-map-summary span,
+.nec-map-summary strong {
+  display: block;
+}
+
+.nec-map-summary span {
+  color: var(--civic-ink-soft);
+  font-size: 0.68rem;
+}
+
+.nec-map-summary strong {
+  margin-top: 5px;
+  color: var(--civic-ink);
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+}
+
+.nec-trend-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.nec-trend-value strong {
+  color: var(--civic-ink);
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  letter-spacing: -0.05em;
+}
+
+.nec-trend-value span {
+  color: var(--civic-green);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+}
+
+.nec-line-chart {
+  height: 182px;
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f5;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 39px, #edf0f5 40px);
+}
+
+.nec-line-chart svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.nec-line-chart__fill {
+  fill: rgba(62, 111, 242, 0.1);
+}
+
+.nec-line-chart__line {
+  fill: none;
+  stroke: var(--civic-blue);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.nec-chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  color: #9aa6b8;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+}
+
+.nec-trend-stats {
+  display: grid;
+  gap: 9px;
+  margin-top: 23px;
+  color: var(--civic-ink-soft);
+  font-size: 0.68rem;
+}
+
+.nec-trend-stats span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nec-trend-stats i {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--civic-blue);
+}
+
+.nec-trend-stats i.is-gray { background: #cfd7e4; }
+.nec-trend-stats strong { margin-left: auto; color: var(--civic-ink); font-family: var(--font-mono); font-size: 0.64rem; }
+
+.nec-region-card,
+.nec-incidents-card {
+  margin-top: 18px;
+}
+
+.nec-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.nec-filter-tabs button {
+  padding: 6px 9px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--civic-ink-soft);
+  font-size: 0.63rem;
+  cursor: pointer;
+}
+
+.nec-filter-tabs button:hover,
+.nec-filter-tabs button.is-active {
+  border-color: #dce5f5;
+  background: #f1f5ff;
+  color: var(--civic-blue);
+}
+
+.nec-region-table td,
+.nec-region-table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.nec-region-table td strong {
+  font-size: 0.77rem;
+}
+
+.nec-reporting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.nec-reporting > span {
+  flex: none;
+  width: 35px;
+  color: var(--civic-ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+}
+
+.nec-reporting .civic-progress {
+  flex: 1;
+}
+
+.nec-reporting .civic-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--civic-blue), #6bcde1);
+}
+
+.nec-text-button {
+  border: 0;
+  background: transparent;
+  color: var(--civic-blue);
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nec-id {
+  color: var(--civic-blue) !important;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .nec-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .nec-map-card .civic-card__body {
+    grid-template-columns: 1fr;
+  }
+
+  .nec-map-summary {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .nec-map-summary div {
+    padding: 0;
+    border: 0;
+  }
+
+  .nec-map-summary strong {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .nec-filter-tabs {
+    justify-content: flex-start;
+    margin-top: 14px;
+  }
+
+  .nec-map-summary {
+    grid-template-columns: 1fr;
+  }
+}

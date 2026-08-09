@@ -1,0 +1,360 @@
+.citizen-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 18px;
+}
+
+.citizen-kpi__status {
+  color: var(--civic-green);
+  font-size: 1.45rem;
+}
+
+.citizen-edit {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--civic-blue);
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.citizen-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.citizen-profile__avatar {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(135deg, #5f7ff2, #19b8c8);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.citizen-profile h3 {
+  color: var(--civic-ink);
+  font-size: 1.05rem;
+}
+
+.citizen-profile p {
+  margin: 3px 0 8px;
+  color: var(--civic-ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+}
+
+.citizen-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 24px;
+  margin: 0;
+  padding: 22px 0;
+}
+
+.citizen-details dt,
+.citizen-details dd {
+  font-size: 0.73rem;
+}
+
+.citizen-details dt {
+  color: var(--civic-ink-soft);
+}
+
+.citizen-details dd {
+  margin: 5px 0 0;
+  color: var(--civic-ink);
+  font-weight: 600;
+}
+
+.citizen-security {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f0f7ff;
+  color: #3d5e9e;
+}
+
+.citizen-security__mark {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #5782e9;
+  color: #fff;
+  font-size: 0.68rem;
+}
+
+.citizen-security strong,
+.citizen-security small {
+  display: block;
+}
+
+.citizen-security strong {
+  font-size: 0.72rem;
+}
+
+.citizen-security small {
+  margin-top: 2px;
+  color: #6c83b5;
+  font-size: 0.64rem;
+}
+
+.citizen-progress-head {
+  display: flex;
+  justify-content: space-between;
+  color: var(--civic-ink-soft);
+  font-size: 0.72rem;
+}
+
+.citizen-progress-head strong {
+  color: var(--civic-blue);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+.citizen-next-card .civic-progress {
+  margin-top: 10px;
+}
+
+.citizen-timeline {
+  display: grid;
+  gap: 18px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.citizen-timeline li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.citizen-timeline li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 10px;
+  width: 1px;
+  height: 24px;
+  background: #e2e8f2;
+}
+
+.citizen-timeline li > span {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #d9e2f1;
+  border-radius: 50%;
+  color: var(--civic-ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+}
+
+.citizen-timeline li.is-complete > span {
+  border-color: #bfe9d7;
+  background: #e9f8f1;
+  color: var(--civic-green);
+}
+
+.citizen-timeline strong,
+.citizen-timeline small {
+  display: block;
+}
+
+.citizen-timeline strong {
+  color: var(--civic-ink);
+  font-size: 0.75rem;
+}
+
+.citizen-timeline small {
+  margin-top: 3px;
+  color: var(--civic-ink-soft);
+  font-size: 0.65rem;
+}
+
+.citizen-next-card__button {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.citizen-services-card {
+  margin-top: 18px;
+}
+
+.citizen-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 20px 22px;
+}
+
+.citizen-service {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 132px;
+  padding: 15px;
+  border: 1px solid var(--civic-line);
+  border-radius: 10px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease),
+    transform 0.2s var(--ease);
+}
+
+.citizen-service:hover,
+.citizen-service.is-selected {
+  border-color: #9cb4ed;
+  box-shadow: 0 7px 18px rgba(55, 87, 146, 0.08);
+  transform: translateY(-2px);
+}
+
+.citizen-service.is-selected {
+  box-shadow: inset 3px 0 0 var(--civic-blue), 0 7px 18px rgba(55, 87, 146, 0.08);
+}
+
+.citizen-service__icon {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #edf2ff;
+}
+
+.citizen-service__icon::before,
+.citizen-service__icon::after {
+  content: '';
+  position: absolute;
+  border: 1.5px solid var(--civic-blue);
+}
+
+.citizen-service__icon[data-icon='card']::before {
+  inset: 8px 5px;
+  border-radius: 3px;
+}
+
+.citizen-service__icon[data-icon='card']::after {
+  left: 8px;
+  right: 8px;
+  top: 13px;
+  border-width: 1px 0 0;
+}
+
+.citizen-service__icon[data-icon='poll']::before {
+  inset: 6px 8px 5px;
+  border-radius: 50% 50% 4px 4px;
+}
+
+.citizen-service__icon[data-icon='poll']::after {
+  left: 7px;
+  right: 7px;
+  bottom: 6px;
+  border-width: 0 0 1px;
+}
+
+.citizen-service__icon[data-icon='document']::before {
+  inset: 5px 8px;
+  border-radius: 3px;
+}
+
+.citizen-service__icon[data-icon='document']::after {
+  left: 11px;
+  right: 11px;
+  top: 12px;
+  border-width: 1px 0 0;
+  box-shadow: 0 4px 0 var(--civic-blue);
+}
+
+.citizen-service__copy {
+  display: block;
+  flex: 1;
+}
+
+.citizen-service__copy strong,
+.citizen-service__copy small {
+  display: block;
+}
+
+.citizen-service__copy strong {
+  color: var(--civic-ink);
+  font-size: 0.76rem;
+}
+
+.citizen-service__copy small {
+  margin-top: 7px;
+  color: var(--civic-ink-soft);
+  font-size: 0.67rem;
+  line-height: 1.45;
+}
+
+.citizen-service .civic-badge {
+  display: none;
+}
+
+.citizen-services__selection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-top: 1px solid var(--civic-line);
+  color: var(--civic-ink-soft);
+  font-size: 0.72rem;
+}
+
+.citizen-services__selection strong {
+  color: var(--civic-ink);
+}
+
+.citizen-services__selection a {
+  margin-left: auto;
+  color: var(--civic-blue);
+  font-weight: 600;
+}
+
+@media (max-width: 1060px) {
+  .citizen-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .citizen-services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .citizen-details {
+    grid-template-columns: 1fr;
+  }
+
+  .citizen-services__selection {
+    flex-wrap: wrap;
+  }
+
+  .citizen-services__selection a {
+    width: 100%;
+    margin-left: 0;
+  }
+}

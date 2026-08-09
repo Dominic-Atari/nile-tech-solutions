@@ -1,0 +1,110 @@
+<app-civic-dashboard pageTitle="Citizen dashboard" pageContext="Citizen services">
+  <div class="civic-page-head">
+    <div>
+      <span class="civic-page-head__eyebrow">Citizen profile · Demo record</span>
+      <h1>Good afternoon, Sarah.</h1>
+      <p>Your civic information, service requests, and election access in one clear workspace.</p>
+    </div>
+    <div class="civic-page-actions">
+      <span class="civic-badge civic-badge--green">Profile verified</span>
+      <button class="civic-button civic-button--primary" type="button">Download voter card</button>
+    </div>
+  </div>
+
+  <div class="civic-kpis">
+    <article class="civic-kpi">
+      <span class="civic-kpi__label">Registration status</span>
+      <strong class="civic-kpi__value citizen-kpi__status">Verified</strong>
+      <span class="civic-kpi__trend">Last checked 08 Aug 2026</span>
+    </article>
+    <article class="civic-kpi">
+      <span class="civic-kpi__label">Assigned station</span>
+      <strong class="civic-kpi__value">PS-004</strong>
+      <span class="civic-kpi__trend civic-kpi__trend--neutral">Juba Central · 1.8 km</span>
+    </article>
+    <article class="civic-kpi">
+      <span class="civic-kpi__label">Open requests</span>
+      <strong class="civic-kpi__value">02</strong>
+      <span class="civic-kpi__trend civic-kpi__trend--neutral">One needs your attention</span>
+    </article>
+    <article class="civic-kpi">
+      <span class="civic-kpi__label">Profile completeness</span>
+      <strong class="civic-kpi__value">92%</strong>
+      <span class="civic-kpi__trend">+8% this month</span>
+    </article>
+  </div>
+
+  <div class="citizen-grid">
+    <section class="civic-card citizen-profile-card">
+      <div class="civic-card__head">
+        <div>
+          <h2>Citizen profile</h2>
+          <p>Identity details held by the civic platform</p>
+        </div>
+        <button class="citizen-edit" type="button">Edit details</button>
+      </div>
+      <div class="civic-card__body">
+        <div class="citizen-profile">
+          <div class="citizen-profile__avatar">SA</div>
+          <div>
+            <h3>Sarah Akech Deng</h3>
+            <p>Citizen ID · SS-CE-2048-1184</p>
+            <span class="civic-badge civic-badge--green">Identity verified</span>
+          </div>
+        </div>
+        <dl class="citizen-details">
+          <div><dt>County</dt><dd>Juba County</dd></div>
+          <div><dt>Payam</dt><dd>Juba Town</dd></div>
+          <div><dt>Polling station</dt><dd>Hai Neem · PS-004</dd></div>
+          <div><dt>Preferred language</dt><dd>English</dd></div>
+        </dl>
+        <div class="citizen-security">
+          <span class="citizen-security__mark">✓</span>
+          <div><strong>Your account is protected</strong><small>Two-step verification is active for this profile.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="civic-card citizen-next-card">
+      <div class="civic-card__head">
+        <div>
+          <h2>Next steps</h2>
+          <p>Keep your civic profile ready</p>
+        </div>
+        <span class="civic-badge">2 of 3 complete</span>
+      </div>
+      <div class="civic-card__body">
+        <div class="citizen-progress-head"><span>Profile readiness</span><strong>92%</strong></div>
+        <div class="civic-progress"><span style="width: 92%"></span></div>
+        <ol class="citizen-timeline">
+          <li class="is-complete"><span>1</span><div><strong>Identity verified</strong><small>Completed 05 Aug 2026</small></div></li>
+          <li class="is-complete"><span>2</span><div><strong>Voter registration confirmed</strong><small>Completed 06 Aug 2026</small></div></li>
+          <li><span>3</span><div><strong>Confirm contact number</strong><small>Optional · keeps service alerts current</small></div></li>
+        </ol>
+        <button class="civic-button civic-button--primary citizen-next-card__button" type="button">Confirm contact number</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="civic-card citizen-services-card">
+    <div class="civic-card__head">
+      <div>
+        <h2>Services for you</h2>
+        <p>Choose a service to see the next action</p>
+      </div>
+      <button class="citizen-edit" type="button">View service history</button>
+    </div>
+    <div class="citizen-services">
+      @for (service of services; track service.title) {
+        <button class="citizen-service" type="button" [class.is-selected]="selectedService() === service.title" (click)="chooseService(service.title)">
+          <span class="citizen-service__icon" [attr.data-icon]="service.icon"></span>
+          <span class="citizen-service__copy"><strong>{{ service.title }}</strong><small>{{ service.description }}</small></span>
+          <span class="civic-badge" [class.civic-badge--green]="service.status === 'Complete'" [class.civic-badge--amber]="service.status === 'Pending'">{{ service.status }}</span>
+        </button>
+      }
+    </div>
+    <div class="citizen-services__selection">
+      <span>Selected service</span><strong>{{ selectedService() }}</strong><a routerLink="/public-portal">Open service</a>
+    </div>
+  </section>
+</app-civic-dashboard>
