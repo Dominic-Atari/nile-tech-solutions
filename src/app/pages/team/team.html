@@ -41,5 +41,15 @@
         </article>
       }
     </div>
+
+    <section class="developer-list" aria-labelledby="developer-list-title">
+      <p class="eyebrow">Software developers</p>
+      <h2 id="developer-list-title" class="developer-list__title">The wider team.</h2>
+      <ul class="developer-list__names">
+        @for (name of softwareDevelopers; track name) {
+          <li>{{ name }}</li>
+        }
+      </ul>
+    </section>
   </div>
 </section>

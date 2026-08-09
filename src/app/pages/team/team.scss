@@ -122,6 +122,34 @@
   align-self: flex-start;
 }
 
+.developer-list {
+  margin-top: clamp(64px, 9vw, 104px);
+  padding-top: 28px;
+  border-top: 1px solid var(--hairline);
+}
+
+.developer-list__title {
+  margin-top: 12px;
+  font-size: clamp(1.65rem, 3vw, 2.3rem);
+}
+
+.developer-list__names {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px 24px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+}
+
+.developer-list__names li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
 @media (max-width: 720px) {
   .grid {
     grid-template-columns: 1fr;

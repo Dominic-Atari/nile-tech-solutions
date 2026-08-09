@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { Worker } from './models/worker';
-import { TEAM } from './team.data';
+import { SOFTWARE_DEVELOPERS, TEAM } from './team.data';
 
 /**
  * In-memory access to the team. No HTTP, no backend — the data ships with the app.
@@ -12,6 +12,9 @@ export class TeamService {
 
   /** All team members. */
   readonly workers = this._workers.asReadonly();
+
+  /** Additional software developers listed without profile details. */
+  readonly softwareDevelopers = SOFTWARE_DEVELOPERS;
 
   /** Look up a member by their URL slug. */
   byId(id: string): Worker | undefined {

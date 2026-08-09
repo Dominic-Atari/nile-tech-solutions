@@ -9,5 +9,8 @@ import { TeamService } from '../../core/team.service';
   styleUrl: './team.scss',
 })
 export class Team {
-  protected readonly team = inject(TeamService).workers;
+  private readonly teamService = inject(TeamService);
+
+  protected readonly team = this.teamService.workers;
+  protected readonly softwareDevelopers = this.teamService.softwareDevelopers;
 }

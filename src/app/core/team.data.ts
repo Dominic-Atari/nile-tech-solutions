@@ -11,13 +11,13 @@ export const TEAM: readonly Worker[] = [
   {
     id: 'dominic-atari-obiala',
     name: 'Dominic Atari Obiala',
-    role: 'Founder · Software Architect',
-    tagline: 'From a spreadsheet in Kakuma to software architecture.',
+    role: 'Founder · Chief Technology Officer',
+    tagline: 'Leads the technical direction behind every solution.',
     location: 'Lincoln, NE, USA',
     initials: 'DO',
     image: 'img/dominic1.jpg',
     accent: 'violet',
-    bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads architecture at Telesuk Solutions, designing the IDesign way in C# and building across Java, Angular, and Ionic.",
+    bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads Telesuk Solutions' technology strategy, architecture, and engineering standards.",
     focus: ['C#', 'IDesign method', 'Java', 'HTML / CSS / JS', 'TypeScript', 'Angular', 'Ionic'],
     email: CONTACT_EMAIL,
     links: [
@@ -27,10 +27,10 @@ export const TEAM: readonly Worker[] = [
     history: [
       {
         year: '2026 – now',
-        title: 'Founder & Software Architect',
+        title: 'Founder & Chief Technology Officer',
         org: 'Telesuk Solutions',
         description:
-          'Designs systems for a living now — the same instinct that started with a spreadsheet in Kakuma, applied with the IDesign method in C# and built across Java, Angular, and Ionic.',
+          'Sets the technical direction for Telesuk Solutions, guiding architecture, engineering standards, and the delivery of practical digital products.',
         kind: 'milestone',
         current: true,
       },
@@ -79,8 +79,8 @@ export const TEAM: readonly Worker[] = [
   {
     id: 'george-isaac-gum',
     name: 'George Isaac Gum',
-    role: 'Co-founder · Business & Growth',
-    tagline: 'Turns hardship into opportunity — for whole communities.',
+    role: 'Co-founder · Chief Executive Officer',
+    tagline: 'Sets the direction and turns ambition into meaningful growth.',
     location: 'Juba, South Sudan',
     initials: 'GG',
     image: 'img/George.jpeg',
@@ -102,10 +102,10 @@ export const TEAM: readonly Worker[] = [
     history: [
       {
         year: 'Now',
-        title: 'Co-founder & Business Lead',
+        title: 'Co-founder & Chief Executive Officer',
         org: 'Telesuk Solutions',
         description:
-          "Brings an entrepreneur's instinct to the studio — partnerships, positioning, and turning engineering work into a business clients invest in.",
+          'Leads the company vision, business strategy, partnerships, and the growth that turns strong engineering work into lasting value for clients.',
         kind: 'milestone',
         current: true,
       },
@@ -176,14 +176,14 @@ export const TEAM: readonly Worker[] = [
   {
     id: 'amara-nwosu',
     name: 'Amara Nwosu',
-    role: 'Senior Backend Engineer',
-    tagline: 'Keeps the systems underneath honest.',
+    role: 'Head of Quality Assurance',
+    tagline: 'Makes sure every release meets the standard it promises.',
     location: 'Remote · Lagos, NG',
     initials: 'AN',
     image: 'img/Amara.jpg',
     accent: 'violet',
-    bio: 'Amara owns the services and schemas that everything else depends on. She likes the unglamorous work — migrations, indexes, and error paths — because that is where products quietly succeed or fail.',
-    focus: ['Node.js', 'Python', 'Postgres', 'APIs', 'Observability'],
+    bio: 'Amara protects the quality of every product Telesuk Solutions ships. She turns requirements into clear acceptance criteria, tests the details others miss, and helps the team deliver reliable experiences from the first build to the final release.',
+    focus: ['Quality strategy', 'Test planning', 'User acceptance', 'Release readiness', 'Continuous improvement'],
     email: CONTACT_EMAIL,
     links: [
       { label: 'GitHub', href: 'https://github.com/' },
@@ -192,10 +192,10 @@ export const TEAM: readonly Worker[] = [
     history: [
       {
         year: '2022 – now',
-        title: 'Senior Backend Engineer',
+        title: 'Head of Quality Assurance',
         org: 'Telesuk Solutions',
         description:
-          'Builds and hardens the platform layer across client projects — the APIs, jobs, and data models that carry the load.',
+          'Owns the quality bar across client projects, coordinating test planning, acceptance checks, defect triage, and release readiness.',
         kind: 'role',
         current: true,
       },
@@ -224,4 +224,13 @@ export const TEAM: readonly Worker[] = [
       },
     ],
   },
+];
+
+/** Additional software developers listed without profile details. */
+export const SOFTWARE_DEVELOPERS: readonly string[] = [
+  'Amina Deng',
+  'Peter Okello',
+  'Sarah Wanjiku',
+  'James Lado',
+  'Grace Atim',
 ];
