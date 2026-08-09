@@ -1,7 +1,7 @@
 import { Worker } from './models/worker';
 
 /** Company-wide contact address. */
-const CONTACT_EMAIL = 'nile.tech.africa.development@gmail.com';
+const CONTACT_EMAIL = 'telesuksolutions@gmail.com';
 
 /**
  * The team. No backend — this is the single source of truth, served from memory.
@@ -9,77 +9,9 @@ const CONTACT_EMAIL = 'nile.tech.africa.development@gmail.com';
  */
 export const TEAM: readonly Worker[] = [
   {
-    id: 'dominic-atari-obiala',
-    name: 'Dominic Atari Obiala',
-    role: 'Co-Founder · Chief Technology Officer',
-    tagline: 'Leads the technical direction behind every solution.',
-    location: 'Lincoln, NE, USA',
-    initials: 'DO',
-    image: 'img/dominic1.jpg',
-    accent: 'violet',
-    bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads Telesuk Solutions' technology strategy, architecture, and engineering standards.",
-    focus: ['C#', 'IDesign method', 'Java', 'HTML / CSS / JS', 'TypeScript', 'Angular', 'Ionic'],
-    email: CONTACT_EMAIL,
-    links: [
-      { label: 'GitHub', href: 'https://github.com/' },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dominic-obiala-0b1487340' },
-    ],
-    history: [
-      {
-        year: '2026 – now',
-        title: 'Co-Founder & Chief Technology Officer',
-        org: 'Telesuk Solutions',
-        description:
-          'Sets the technical direction for Telesuk Solutions, guiding architecture, engineering standards, and the delivery of practical digital products.',
-        kind: 'milestone',
-        current: true,
-      },
-      {
-        year: '2026',
-        title: 'Pathways Program Graduate',
-        org: "Doane University · partner with: Don't Panic Labs",
-        description:
-          'Twenty weeks that turned a self-taught builder into an engineer. He showed up, did the work, and walked out ready to make a team better.',
-        kind: 'education',
-      },
-      {
-        year: '2025',
-        title: 'Building Anchovy',
-        org: 'TMCO',
-        description:
-          "Diane, TMCO's CEO, backed him to join the development team in Anchovy — a mobile app for saving and organizing recipes. His first real product, made for real people.",
-        kind: 'role',
-      },
-      {
-        year: '2024',
-        title: 'Java & Spring Boot',
-        org: 'Southeast Community College · Lincoln, NE',
-        description:
-          'Enrolled at SCC and got serious about software — learning Java and writing his first Spring Boot applications.',
-        kind: 'education',
-      },
-      {
-        year: '2023',
-        title: 'A fresh start in the United States',
-        org: 'Lincoln, Nebraska',
-        description:
-          'Arriving in the US, he made a decision: no more working around problems in a spreadsheet. It was time to build real software.',
-        kind: 'milestone',
-      },
-      {
-        year: 'Until 2023',
-        title: 'Bamba Chakula shop owner',
-        org: 'Kakuma Refugee Camp, Kenya',
-        description:
-          'Ran a Bamba Chakula food business in the camp. As customer records piled up, he taught himself to keep track of it all in Microsoft Excel — the first time technology solved a real problem for him. The spark.',
-        kind: 'milestone',
-      },
-    ],
-  },
-  {
     id: 'george-isaac-gum',
     name: 'George Isaac Gum',
-    role: 'Co-founder · Chief Executive Officer',
+    role: 'Co-founder · Chief Executive Officer (CEO)',
     tagline: 'Sets the direction and turns ambition into meaningful growth.',
     location: 'Juba, South Sudan',
     initials: 'GG',
@@ -174,9 +106,77 @@ export const TEAM: readonly Worker[] = [
     ],
   },
   {
+    id: 'dominic-atari-obiala',
+    name: 'Dominic Atari Obiala',
+    role: 'Co-Founder · Chief Technology Officer (CTO)',
+    tagline: 'Leads the technical direction behind every solution.',
+    location: 'Lincoln, NE, USA',
+    initials: 'DO',
+    image: 'img/dominic1.jpg',
+    accent: 'violet',
+    bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads Telesuk Solutions' technology strategy, architecture, and engineering standards.",
+    focus: ['C#', 'IDesign method', 'Java', 'HTML / CSS / JS', 'TypeScript', 'Angular', 'Ionic'],
+    email: CONTACT_EMAIL,
+    links: [
+      { label: 'GitHub', href: 'https://github.com/' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dominic-obiala-0b1487340' },
+    ],
+    history: [
+      {
+        year: '2026 – now',
+        title: 'Co-Founder & Chief Technology Officer',
+        org: 'Telesuk Solutions',
+        description:
+          'Sets the technical direction for Telesuk Solutions, guiding architecture, engineering standards, and the delivery of practical digital products.',
+        kind: 'milestone',
+        current: true,
+      },
+      {
+        year: '2026',
+        title: 'Pathways Program Graduate',
+        org: "Doane University · partner with: Don't Panic Labs",
+        description:
+          'Twenty weeks that turned a self-taught builder into an engineer. He showed up, did the work, and walked out ready to make a team better.',
+        kind: 'education',
+      },
+      {
+        year: '2025',
+        title: 'Building Anchovy',
+        org: 'TMCO',
+        description:
+          "Diane, TMCO's CEO, backed him to join the development team in Anchovy — a mobile app for saving and organizing recipes. His first real product, made for real people.",
+        kind: 'role',
+      },
+      {
+        year: '2024',
+        title: 'Java & Spring Boot',
+        org: 'Southeast Community College · Lincoln, NE',
+        description:
+          'Enrolled at SCC and got serious about software — learning Java and writing his first Spring Boot applications.',
+        kind: 'education',
+      },
+      {
+        year: '2023',
+        title: 'A fresh start in the United States',
+        org: 'Lincoln, Nebraska',
+        description:
+          'Arriving in the US, he made a decision: no more working around problems in a spreadsheet. It was time to build real software.',
+        kind: 'milestone',
+      },
+      {
+        year: 'Until 2023',
+        title: 'Bamba Chakula shop owner',
+        org: 'Kakuma Refugee Camp, Kenya',
+        description:
+          'Ran a Bamba Chakula food business in the camp. As customer records piled up, he taught himself to keep track of it all in Microsoft Excel — the first time technology solved a real problem for him. The spark.',
+        kind: 'milestone',
+      },
+    ],
+  },
+  {
     id: 'amara-nwosu',
     name: 'Amara Nwosu',
-    role: 'Head of Quality Assurance',
+    role: 'Head of Quality Assurance (QA)',
     tagline: 'Makes sure every release meets the standard it promises.',
     location: 'Remote · Lagos, NG',
     initials: 'AN',
