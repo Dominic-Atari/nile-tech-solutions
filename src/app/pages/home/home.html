@@ -51,50 +51,6 @@
   </div>
 </section>
 
-<!-- ===================== ABOUT ===================== -->
-<section class="section about" id="about">
-  <div class="container">
-    <header class="section__head">
-      <p class="eyebrow">About Telesuk</p>
-      <h2 class="section__title">Technology with a purpose.</h2>
-      <p class="section__sub">
-        We listen closely to the people facing a problem, then build focused technology that makes
-        the next step clearer, faster, and more accessible.
-      </p>
-    </header>
-
-    <div class="about__grid">
-      <article class="about__card about__card--wide">
-        <p class="about__label">Company description</p>
-        <h3 class="about__title">A local technology partner for a digital future.</h3>
-        <p class="about__copy">
-          Telesuk Solutions brings together technical skill, local understanding, and a commitment
-          to useful innovation. From websites and business systems to custom digital platforms, we
-          create reliable solutions for organizations and communities in South Sudan and beyond.
-        </p>
-      </article>
-
-      <article class="about__card" id="mission">
-        <p class="about__label">Our mission</p>
-        <h3 class="about__title">Solve meaningful problems through digital solutions.</h3>
-        <p class="about__copy">
-          We make technology practical and dependable so businesses, organizations, and communities
-          can serve people better and turn good ideas into lasting progress.
-        </p>
-      </article>
-
-      <article class="about__card" id="vision">
-        <p class="about__label">Our vision</p>
-        <h3 class="about__title">A connected, capable, and digitally confident South Sudan.</h3>
-        <p class="about__copy">
-          We envision a future where trusted technology opens opportunity, strengthens local
-          businesses, and helps every community move forward.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== CAPABILITIES ===================== -->
 <section class="section">
   <div class="container">
@@ -116,62 +72,10 @@
         </article>
       }
     </div>
-  </div>
-</section>
 
-<!-- ===================== WORK ===================== -->
-<section class="section" id="work">
-  <div class="container">
-    <header class="section__head">
-      <p class="eyebrow">Selected work</p>
-      <h2 class="section__title">Things we have shipped.</h2>
-      <p class="section__sub">
-        Small, real, and live in your browser. Each one is deployed and open-source — click through
-        and use it.
-      </p>
-    </header>
-
-    <div class="work">
-      @for (project of projects(); track project.id) {
-        <article class="work__card" [attr.data-accent]="project.accent">
-          <!-- Browser-chrome header; the whole bar opens the live demo -->
-          <a
-            class="work__chrome"
-            [href]="project.liveUrl"
-            target="_blank"
-            rel="noopener"
-            [attr.aria-label]="'Open the ' + project.name + ' live demo'"
-          >
-            <span class="work__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="work__url">{{ displayUrl(project.liveUrl) }}</span>
-            <span class="work__go" aria-hidden="true">↗</span>
-          </a>
-
-          <div class="work__body">
-            <h3 class="work__name">{{ project.name }}</h3>
-            <p class="work__summary">{{ project.summary }}</p>
-            @if (project.note) {
-              <p class="work__note">{{ project.note }}</p>
-            }
-            <ul class="work__tech">
-              @for (tech of project.tech; track tech) {
-                <li>{{ tech }}</li>
-              }
-            </ul>
-          </div>
-
-          <div class="work__actions">
-            <a class="btn btn--primary" [href]="project.liveUrl" target="_blank" rel="noopener">
-              Open live demo ↗
-            </a>
-            @if (project.repoUrl) {
-              <a class="btn btn--ghost" [href]="project.repoUrl" target="_blank" rel="noopener">
-                Source
-              </a>
-            }
-          </div>
-        </article>
-      }
+    <div class="caps__cta">
+      <a class="btn btn--primary" routerLink="/work">See what we have shipped</a>
+      <a class="btn btn--ghost" routerLink="/about">About Telesuk</a>
     </div>
   </div>
 </section>

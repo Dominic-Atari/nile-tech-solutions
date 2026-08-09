@@ -3,6 +3,8 @@
    Concept: "The Throughline" — one luminous duotone line runs through the site.
    ========================================================================= */
 
+@use './app/shared/civic-dashboard/civic-dashboard';
+
 :root {
   /* Surfaces */
   --ink: #0a0c12;
@@ -42,9 +44,14 @@
   box-sizing: border-box;
 }
 
+/*
+ * No `scroll-behavior: smooth` here. Every nav entry is now a route, and the
+ * router's scroll-to-top would animate instead of jumping — leaving you looking
+ * at the middle of a page you just left, or nowhere at all when the tab isn't
+ * painting (rAF is paused, so the animation never runs).
+ */
 html {
   -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -215,10 +222,6 @@ svg {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   *,
   *::before,
   *::after {

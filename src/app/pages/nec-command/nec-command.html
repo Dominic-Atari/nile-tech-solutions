@@ -1,0 +1,95 @@
+<app-civic-dashboard pageTitle="NEC command center" pageContext="National operations">
+  <div class="civic-page-head">
+    <div>
+      <span class="civic-page-head__eyebrow">National Election Commission · Operations view</span>
+      <h1>Command center</h1>
+      <p>One operating picture for station reporting, turnout movement, and field response.</p>
+    </div>
+    <div class="civic-page-actions">
+      <span class="civic-badge civic-badge--green">Data refresh 42s ago</span>
+      <button class="civic-button" type="button">Download briefing</button>
+    </div>
+  </div>
+
+  <div class="civic-kpis">
+    <article class="civic-kpi"><span class="civic-kpi__label">Stations reporting</span><strong class="civic-kpi__value">86.4%</strong><span class="civic-kpi__trend">+4.2% in last hour</span></article>
+    <article class="civic-kpi"><span class="civic-kpi__label">Verified voters</span><strong class="civic-kpi__value">1.24m</strong><span class="civic-kpi__trend">+8.6k since 13:00</span></article>
+    <article class="civic-kpi"><span class="civic-kpi__label">Open incidents</span><strong class="civic-kpi__value">18</strong><span class="civic-kpi__trend civic-kpi__trend--neutral">4 require escalation</span></article>
+    <article class="civic-kpi"><span class="civic-kpi__label">Network availability</span><strong class="civic-kpi__value">99.2%</strong><span class="civic-kpi__trend">Within target range</span></article>
+  </div>
+
+  <div class="nec-overview-grid">
+    <section class="civic-card nec-map-card">
+      <div class="civic-card__head">
+        <div><h2>National operating picture</h2><p>Station reports received by region</p></div>
+        <span class="civic-badge">08 Aug · 14:32 CAT</span>
+      </div>
+      <div class="civic-card__body">
+        <div class="nec-map-visual" aria-label="Stylized map view of South Sudan regions">
+          <div class="nec-map-ghost"></div>
+          <span class="nec-map-node nec-map-node--one"><i></i><b>Juba</b></span>
+          <span class="nec-map-node nec-map-node--two"><i></i><b>Wau</b></span>
+          <span class="nec-map-node nec-map-node--three"><i></i><b>Malakal</b></span>
+          <span class="nec-map-node nec-map-node--four"><i></i><b>Bor</b></span>
+          <div class="nec-map-legend"><span><i class="is-stable"></i>Stable</span><span><i class="is-watch"></i>Watch</span><span><i class="is-alert"></i>Attention</span></div>
+        </div>
+        <div class="nec-map-summary">
+          <div><span>Reporting stations</span><strong>1,476 / 1,708</strong></div>
+          <div><span>Average turnout</span><strong>55.8%</strong></div>
+          <div><span>Field teams active</span><strong>42</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="civic-card nec-trend-card">
+      <div class="civic-card__head"><div><h2>National turnout</h2><p>Hourly movement · verified voters</p></div><span class="civic-badge civic-badge--green">On track</span></div>
+      <div class="civic-card__body">
+        <div class="nec-trend-value"><strong>55.8%</strong><span>+6.4 pts since 10:00</span></div>
+        <div class="nec-line-chart" aria-hidden="true"><svg viewBox="0 0 500 160" preserveAspectRatio="none"><path class="nec-line-chart__fill" d="M0 140 L50 128 L100 132 L150 108 L200 114 L250 84 L300 91 L350 57 L400 64 L450 38 L500 20 V160 H0 Z"/><path class="nec-line-chart__line" d="M0 140 L50 128 L100 132 L150 108 L200 114 L250 84 L300 91 L350 57 L400 64 L450 38 L500 20"/></svg></div>
+        <div class="nec-chart-labels"><span>08:00</span><span>10:00</span><span>12:00</span><span>14:00</span></div>
+        <div class="nec-trend-stats"><span><i class="is-blue"></i>Verified turnout <strong>1.24m</strong></span><span><i class="is-gray"></i>Expected pace <strong>58.1%</strong></span></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="civic-card nec-region-card">
+    <div class="civic-card__head">
+      <div><h2>Regional performance</h2><p>Filter the national view by operating region</p></div>
+      <div class="nec-filter-tabs">
+        @for (filter of filters; track filter) {
+          <button type="button" [class.is-active]="regionFilter() === filter" (click)="setRegionFilter(filter)">{{ filter }}</button>
+        }
+      </div>
+    </div>
+    <div class="civic-table-wrap">
+      <table class="civic-table nec-region-table">
+        <thead><tr><th>Region</th><th>Stations</th><th>Reporting</th><th>Turnout</th><th>Status</th></tr></thead>
+        <tbody>
+          @for (region of visibleRegions(); track region.name) {
+            <tr>
+              <td><strong>{{ region.name }}</strong></td>
+              <td>{{ region.stations }}</td>
+              <td><div class="nec-reporting"><span>{{ region.reporting }}%</span><div class="civic-progress"><i [style.width.%]="region.reporting"></i></div></div></td>
+              <td>{{ region.turnout }}%</td>
+              <td><span class="civic-badge" [class.civic-badge--green]="region.status === 'Stable'" [class.civic-badge--amber]="region.status === 'Watch'" [class.civic-badge--red]="region.status === 'Attention'">{{ region.status }}</span></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="civic-card nec-incidents-card">
+    <div class="civic-card__head"><div><h2>Incident queue</h2><p>Open events requiring field coordination</p></div><button class="nec-text-button" type="button">Open incident console</button></div>
+    <div class="civic-table-wrap">
+      <table class="civic-table nec-incidents-table">
+        <thead><tr><th>Reference</th><th>Region</th><th>Issue</th><th>Owner</th><th>Age</th><th>Priority</th></tr></thead>
+        <tbody>
+          @for (incident of incidents; track incident.id) {
+            <tr><td class="nec-id">{{ incident.id }}</td><td>{{ incident.region }}</td><td>{{ incident.issue }}</td><td class="civic-muted">{{ incident.owner }}</td><td class="civic-muted">{{ incident.age }}</td><td><span class="civic-badge" [class.civic-badge--red]="incident.priority === 'High'" [class.civic-badge--amber]="incident.priority === 'Medium'" [class.civic-badge--green]="incident.priority === 'Low'">{{ incident.priority }}</span></td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+</app-civic-dashboard>

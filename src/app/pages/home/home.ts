@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TeamService } from '../../core/team.service';
-import { ProjectsService } from '../../core/projects.service';
 
 interface Capability {
   title: string;
@@ -16,12 +15,6 @@ interface Capability {
 })
 export class Home {
   protected readonly team = inject(TeamService).workers;
-  protected readonly projects = inject(ProjectsService).projects;
-
-  /** Host + path of a URL, for the browser-chrome address bar on Work cards. */
-  protected displayUrl(url: string): string {
-    return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
-  }
 
   protected readonly capabilities: Capability[] = [
     {

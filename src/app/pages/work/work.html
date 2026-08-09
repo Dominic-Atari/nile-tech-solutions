@@ -1,0 +1,59 @@
+<section class="section">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">Selected work</p>
+      <h1 class="section__title">Things we have shipped.</h1>
+      <p class="section__sub">
+        Small, real, and live in your browser. Each one is deployed and open-source — click through
+        and use it.
+      </p>
+    </header>
+
+    <div class="work">
+      @for (project of projects(); track project.id) {
+        <article class="work__card" [attr.data-accent]="project.accent">
+          <!-- Browser-chrome header; the whole bar opens the live demo -->
+          <a
+            class="work__chrome"
+            [href]="project.liveUrl"
+            target="_blank"
+            rel="noopener"
+            [attr.aria-label]="'Open the ' + project.name + ' live demo'"
+          >
+            <span class="work__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="work__url">{{ displayUrl(project.liveUrl) }}</span>
+            <span class="work__go" aria-hidden="true">↗</span>
+          </a>
+
+          <div class="work__body">
+            <h2 class="work__name">{{ project.name }}</h2>
+            <p class="work__summary">{{ project.summary }}</p>
+            @if (project.note) {
+              <p class="work__note">{{ project.note }}</p>
+            }
+            <ul class="work__tech">
+              @for (tech of project.tech; track tech) {
+                <li>{{ tech }}</li>
+              }
+            </ul>
+          </div>
+
+          <div class="work__actions">
+            <a class="btn btn--primary" [href]="project.liveUrl" target="_blank" rel="noopener">
+              Open live demo ↗
+            </a>
+            @if (project.repoUrl) {
+              <a class="btn btn--ghost" [href]="project.repoUrl" target="_blank" rel="noopener">
+                Source
+              </a>
+            }
+          </div>
+        </article>
+      }
+    </div>
+
+    <div class="work__cta">
+      <a class="btn btn--ghost" routerLink="/team">Meet the people who built these</a>
+    </div>
+  </div>
+</section>
