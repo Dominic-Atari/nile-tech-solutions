@@ -112,7 +112,7 @@ export const TEAM: readonly Worker[] = [
     tagline: 'Leads the technical direction behind every solution.',
     location: 'Lincoln, NE, USA',
     initials: 'DO',
-    image: 'img/dominic1.jpg',
+    image: 'img/DominicProfile1.png',
     accent: 'violet',
     bio: "Dominic's path into software started with a spreadsheet in a refugee camp. From Kakuma to Lincoln, Nebraska, he went from tracking a food business in Excel to shipping real products — and now leads Telesuk Solutions' technology strategy, architecture, and engineering standards.",
     focus: ['C#', 'IDesign method', 'Java', 'HTML / CSS / JS', 'TypeScript', 'Angular', 'Ionic'],
